@@ -1,0 +1,19 @@
+@mixin btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  background: linear-gradient(56.01deg, #298860 0%, #65D521 101.79%);
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  span {
+    display: block;
+    margin-right: 25px;
+  }
+}

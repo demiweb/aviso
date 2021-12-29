@@ -1,0 +1,41 @@
+@import "common/vars";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $primary-color;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 75px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.section-bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+}
+
+.section-title {
+  font-size: 64px;
+  line-height: 64px;
+  font-weight: 700;
+  display: block;
+}

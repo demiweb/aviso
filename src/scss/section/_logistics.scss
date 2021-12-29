@@ -1,0 +1,45 @@
+@import "../common/mixins";
+@import "../common/vars";
+
+.logistics {
+  background: $primary-color;
+}
+
+.logistics-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 80px;
+
+  > div {
+    color: #fff;
+
+    &:first-of-type {
+      display: flex;
+      flex-direction: column;
+    }
+
+    span {
+      &:first-of-type {
+        font-size: 64px;
+        line-height: 75px;
+        font-weight: 700;
+        margin-bottom: 25px;
+      }
+
+      &:last-of-type {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 500;
+        max-width: 190px;
+      }
+    }
+
+    p {
+      margin-top: 15px;
+      font-size: 24px;
+      line-height: 32px;
+      font-weight: 300;
+      max-width: 502px;
+    }
+  }
+}
