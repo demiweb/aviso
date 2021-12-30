@@ -1,0 +1,38 @@
+@import "../common/vars";
+@import "../common/mixins";
+
+.swiper-button-prev-custom, .swiper-button-next-custom {
+  width: 60px;
+  height: 60px;
+  background: #C2CED7;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+
+  &:after {
+    content: '';
+  }
+
+  svg {
+    z-index: 10;
+  }
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(56.01deg, #298860 0%, #65D521 101.79%);
+    opacity: 0;
+    transition: opacity .4s ease;
+  }
+
+  &:hover {
+    &:before {
+      opacity: 1;
+    }
+  }
+}

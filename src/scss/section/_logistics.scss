@@ -3,6 +3,9 @@
 
 .logistics {
   background: $primary-color;
+  position: relative;
+  height: 100vh;
+  min-height: 957px;
 }
 
 .logistics-content {
@@ -43,3 +46,98 @@
     }
   }
 }
+
+.map {
+  position: absolute;
+  top: 33px;
+  left: 11.8%;
+
+  svg {
+    z-index: 2;
+
+    path {
+      transition: all .3s ease;
+
+      &:hover {
+        fill: #26684B;
+        stroke: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .description {
+    position: absolute;
+    z-index: 1;
+
+    .circle {
+      position: relative;
+      width: 11px;
+      height: 11px;
+      border-radius: 100%;
+      background: #fff;
+      opacity: 0;
+      animation: .5s ease forwards;
+
+      .circle-shadow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 11px;
+        height: 11px;
+        background: transparent;
+        border-radius: 100%;
+        animation: .7s ease forwards;
+        animation-delay: .5s;
+      }
+
+      .line {
+        position: absolute;
+        border-bottom: 1px solid #fff;
+        width: 510px;
+        right: 11px;
+        top: 5px;
+        animation: .7s ease forwards;
+        animation-delay: 1.2s;
+        opacity: 0;
+      }
+    }
+
+    .text {
+      color: #fff;
+      width: 180px;
+      position: absolute;
+      top: 13px;
+      left: -510px;
+      opacity: 0;
+      animation: .5s ease forwards;
+      animation-delay: 1.7s;
+
+      .name {
+        font-size: 16px;
+        line-height: 18px;
+        font-weight: 500;
+        display: block;
+        margin-bottom: 6px;
+
+      }
+
+      .address {
+        font-size: 14px;
+        line-height: 16px;
+        font-weight: 400;
+        display: block;
+      }
+    }
+
+  }
+
+  .description.description-revert {
+    transform: rotate(180deg) scale(1, -1);
+
+    .text {
+      transform: scale(-1, 1);
+    }
+  }
+}
+

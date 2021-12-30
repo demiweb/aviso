@@ -20,7 +20,11 @@
   margin-right: 40px;
 
   svg {
-
+    path[data-anim='rotate'] {
+      transform: rotate(0);
+      transform-origin: 50% 56%;
+      animation: rotate 2000ms infinite linear;
+    }
   }
 
   > div {

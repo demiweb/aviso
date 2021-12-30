@@ -68,6 +68,12 @@
     justify-content: flex-end;
     border: 1px solid $light-grey;
 
+    svg {
+      path {
+        animation: strokeOffset 2s linear forwards;
+      }
+    }
+
     > span {
       display: block;
       margin-top: 15px;
@@ -86,11 +92,4 @@
   }
 }
 
-@keyframes zoom {
-  0% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+@keyframes strokeOffset { to { stroke-dashoffset: 0; } }

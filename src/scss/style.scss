@@ -3,9 +3,15 @@
 // header
 @import "header/header";
 
+// footer
+@import "footer/footer";
+
 // assist
 @import "assist/buttons";
 @import "assist/dropdown-input";
+@import "assist/slider";
+@import "assist/animations";
+
 
 // section
 @import "section/hero";
@@ -13,3 +19,4 @@
 @import "section/distribution";
 @import "section/news";
 @import "section/logistics";
+@import "section/seo";
