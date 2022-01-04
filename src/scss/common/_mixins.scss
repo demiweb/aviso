@@ -1,9 +1,10 @@
+@import "vars";
+
 @mixin btn {
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
-  background: linear-gradient(56.01deg, #298860 0%, #65D521 101.79%);
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 5px;
@@ -12,8 +13,37 @@
   font-weight: 700;
   border: none;
   outline: none;
+  position: relative;
+  background: linear-gradient(56.01deg, #298860 0%, #65D521 101.79%);
+
+
+  &:after {
+    content: '';
+    position: absolute;
+    border-radius: 5px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity .4s ease;
+    background: $green;
+    z-index: 1;
+  }
+
   span {
     display: block;
     margin-right: 25px;
+    z-index: 5;
+    position: relative;
+  }
+  svg {
+    z-index: 5;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 1;
+    }
   }
 }

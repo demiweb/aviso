@@ -57,6 +57,7 @@
 
     path {
       transition: all .3s ease;
+      z-index: 5;
 
       &:hover {
         fill: #26684B;
@@ -137,6 +138,7 @@
 
     .text {
       transform: scale(-1, 1);
+      text-align: right;
     }
   }
 }

@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Подключение линков -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.min.css">
+
+    <title>Aviso</title>
+</head>
+<body>
+<!-- Подключение хедера -->
+<header class="header">
+    <div class="header-logo">
+        <img src="img/svg/header-logo.svg" alt="">
+    </div>
+    <div class="header-burger">
+        <span></span>
+    </div>
+    <div class="header-nav">
+        <ul>
+            <li>
+                Company
+            </li>
+            <li>
+                Expertise
+            </li>
+            <li>
+                Car park
+            </li>
+            <li>
+                Contact
+            </li>
+        </ul>
+    </div>
+    <div class="header-btn">
+        <a href="#" class="btn-green">
+            <span>
+                Calculation request
+            </span>
+        </a>
+    </div>
+</header>
+
+<main>
+    <section class="about">
+        <div class="about-hero">
+            <div class="image">
+                <div class="bg">
+                    <img src="img/about-img.png" alt="img">
+                </div>
+                <svg width="239" height="102" viewBox="0 0 239 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2.80908 73.546V101.52H21.2258V98.3227H6.08649V73.546H2.80908ZM28.8162 87.5324C28.8162 89.3706 29.1225 91.1427 29.733 92.8469C30.3444 94.552 31.2225 96.0908 32.3672 97.463C33.5118 98.8353 35.0083 99.9345 36.8546 100.76C38.7009 101.586 40.7832 101.999 43.0983 101.999C45.4133 101.999 47.4945 101.586 49.3419 100.76C51.1882 99.9345 52.6847 98.8353 53.8283 97.463C54.973 96.0908 55.8511 94.552 56.4625 92.8469C57.073 91.1417 57.3793 89.3706 57.3793 87.5324C57.3793 85.6943 57.073 83.9221 56.4625 82.217C55.8511 80.5118 54.973 78.9731 53.8283 77.6018C52.6847 76.2296 51.1882 75.1304 49.3419 74.3052C47.4945 73.479 45.4133 73.0659 43.0983 73.0659C40.7832 73.0659 38.7009 73.479 36.8546 74.3052C35.0083 75.1304 33.5118 76.2296 32.3672 77.6018C31.2225 78.9741 30.3444 80.5128 29.733 82.217C29.1215 83.9232 28.8162 85.6943 28.8162 87.5324ZM54.0622 87.5324C54.0622 88.9981 53.8353 90.3967 53.3804 91.7284C52.9245 93.061 52.2615 94.2597 51.3894 95.3245C50.5182 96.3902 49.3676 97.2357 47.9365 97.8619C46.5065 98.4882 44.893 98.8008 43.0983 98.8008C41.3025 98.8008 39.691 98.4871 38.2599 97.8619C36.8288 97.2357 35.6783 96.3902 34.8061 95.3245C33.935 94.2587 33.272 93.06 32.8161 91.7284C32.3612 90.3957 32.1342 88.9981 32.1342 87.5324C32.1342 86.0668 32.3612 84.6681 32.8161 83.3365C33.271 82.0038 33.935 80.8061 34.8061 79.7404C35.6783 78.6747 36.8288 77.8292 38.2599 77.2029C39.69 76.5767 41.3025 76.2641 43.0983 76.2641C44.893 76.2641 46.5055 76.5767 47.9365 77.2029C49.3676 77.8292 50.5182 78.6747 51.3894 79.7404C52.2615 80.8061 52.9245 82.0048 53.3804 83.3365C53.8353 84.6692 54.0622 86.0668 54.0622 87.5324ZM66.1788 87.5324C66.1788 90.0638 66.5951 92.2886 67.4275 94.2059C68.26 96.1243 69.3858 97.6356 70.803 98.7419C72.2202 99.8472 73.7881 100.666 75.5046 101.199C77.2211 101.732 79.0555 101.999 81.0069 101.999C84.0494 101.999 86.8977 101.373 89.5517 100.12V86.6524H86.2733V97.7624C84.869 98.4547 83.1912 98.8008 81.2398 98.8008C79.7314 98.8008 78.3073 98.6008 76.9674 98.2009C75.6265 97.801 74.3857 97.1829 73.24 96.3425C72.0964 95.5031 71.1856 94.3318 70.5087 92.8256C69.8318 91.3203 69.4949 89.5553 69.4949 87.5304C69.4949 85.6121 69.8259 83.9069 70.4899 82.4149C71.1529 80.9229 72.0508 79.7445 73.1825 78.8777C74.3143 78.0119 75.5561 77.3593 76.9089 76.9198C78.2617 76.4803 79.6799 76.261 81.1625 76.261C84.205 76.261 86.7808 76.9401 88.8887 78.2991V74.9426C86.4428 73.6911 83.7115 73.0638 80.6937 73.0638C78.1963 73.0638 75.8683 73.5835 73.7088 74.6229C71.5493 75.6612 69.7555 77.3075 68.3234 79.5587C66.8934 81.812 66.1788 84.4692 66.1788 87.5324ZM100.731 73.546V101.52H104.009V73.546H100.731ZM114.798 80.46C114.798 81.7927 115.097 82.9508 115.695 83.9363C116.292 84.9219 117.074 85.7014 118.035 86.2738C118.999 86.8463 120.051 87.3528 121.196 87.7923C122.341 88.2318 123.491 88.6378 124.649 89.0113C125.806 89.3838 126.866 89.7969 127.829 90.2506C128.791 90.7032 129.572 91.296 130.17 92.0288C130.768 92.7616 131.067 93.6335 131.067 94.6465C131.067 97.4174 128.726 98.8028 124.043 98.8028C120.688 98.8028 117.644 97.9502 114.913 96.245V99.6026C117.697 101.201 120.817 102 124.277 102C125.629 102 126.892 101.867 128.062 101.6C129.232 101.333 130.299 100.907 131.262 100.321C132.224 99.7356 132.984 98.9358 133.544 97.9238C134.104 96.9119 134.384 95.7396 134.384 94.4069C134.384 92.8357 133.98 91.4899 133.174 90.3703C132.367 89.2508 131.366 88.4195 130.17 87.8725C128.973 87.3264 127.667 86.7935 126.248 86.2738C124.83 85.7542 123.523 85.2944 122.327 84.8955C121.131 84.4966 120.129 83.91 119.323 83.1376C118.517 82.3652 118.113 81.4324 118.113 80.3403C118.113 77.6221 120.206 76.2641 124.395 76.2641C127.464 76.2103 130.144 76.9431 132.432 78.4625V75.105C130.117 73.7469 127.36 73.0669 124.16 73.0669C121.506 73.0669 119.282 73.7063 117.488 74.9852C115.695 76.2631 114.798 78.088 114.798 80.46ZM141.195 73.546V76.7422H150.795V101.519H154.073V76.7422H163.672V73.546H141.195ZM173.055 73.546V101.52H176.333V73.546H173.055ZM186.926 87.7324C186.926 89.9704 187.343 92.0146 188.175 93.8669C189.008 95.7183 190.114 97.2235 191.492 98.3826C192.872 99.5417 194.406 100.434 196.097 101.06C197.787 101.686 199.504 101.999 201.247 101.999C204.16 101.999 206.801 101.373 209.167 100.12V96.7637C207.294 98.1228 204.889 98.8018 201.949 98.8018C199.973 98.8018 198.118 98.4161 196.389 97.6427C194.659 96.8703 193.203 95.6178 192.019 93.8862C190.835 92.1547 190.243 90.1024 190.243 87.7324C190.269 84.0023 191.427 81.1583 193.716 79.2004C196.005 77.2425 198.711 76.2631 201.832 76.2631C204.617 76.2631 206.996 76.9421 208.973 78.3012V74.9446C206.657 73.6931 204.095 73.0659 201.286 73.0659C198.84 73.0659 196.551 73.5988 194.418 74.6645C192.285 75.7302 190.503 77.4019 189.072 79.6795C187.642 81.9581 186.926 84.6418 186.926 87.7324ZM217.851 80.46C217.851 81.7927 218.15 82.9508 218.748 83.9363C219.346 84.9219 220.128 85.7014 221.089 86.2738C222.052 86.8463 223.105 87.3528 224.249 87.7923C225.394 88.2318 226.545 88.6378 227.702 89.0113C228.86 89.3838 229.919 89.7969 230.882 90.2506C231.845 90.7032 232.626 91.296 233.223 92.0288C233.822 92.7616 234.12 93.6335 234.12 94.6465C234.12 97.4174 231.779 98.8028 227.097 98.8028C223.74 98.8028 220.697 97.9502 217.966 96.245V99.6026C220.75 101.201 223.871 102 227.33 102C228.682 102 229.945 101.867 231.115 101.6C232.286 101.333 233.352 100.907 234.315 100.321C235.278 99.7356 236.039 98.9358 236.598 97.9238C237.157 96.9109 237.437 95.7396 237.437 94.4069C237.437 92.8357 237.034 91.4899 236.227 90.3703C235.42 89.2508 234.419 88.4195 233.223 87.8725C232.026 87.3264 230.72 86.7935 229.302 86.2738C227.883 85.7542 226.576 85.2944 225.38 84.8955C224.184 84.4966 223.182 83.91 222.376 83.1376C221.569 82.3652 221.166 81.4324 221.166 80.3403C221.166 77.6221 223.259 76.2641 227.448 76.2641C230.518 76.2103 233.197 76.9431 235.486 78.4625V75.105C233.171 73.7469 230.414 73.0669 227.214 73.0669C224.56 73.0669 222.336 73.7063 220.541 74.9852C218.748 76.2631 217.851 78.088 217.851 80.46Z"
+                          fill="white"/>
+                    <path d="M15.8652 46.3445H40.3922L44.301 56.7584H56.181L34.3362 1.11291H21.9202L-0.000976562 56.7584H11.8791L15.8652 46.3445ZM26.902 16.5344C27.4391 15.2622 27.8225 13.8317 28.1287 12.1619C28.3586 13.5933 28.742 15.0238 29.279 16.5344L36.7905 36.4876H19.4678L26.902 16.5344ZM106.155 1.11291H93.7394L79.3298 42.7674L64.9964 1.11291H52.5794L73.4274 56.7584H85.2311L106.155 1.11291ZM113.13 56.7584H124.627V1.11291H113.13V56.7584ZM134.515 15.8191C134.515 25.5969 141.874 29.6509 149.232 32.3535C156.513 35.3737 163.871 36.8052 163.871 42.0522C163.871 45.6293 160.498 47.3783 153.83 47.3783C146.855 47.3783 140.57 45.3909 134.821 41.4962V52.8637C140.57 56.2025 147.238 57.8723 154.672 57.8723C165.94 57.8723 175.598 53.8975 175.598 41.4962C175.598 38.3959 174.908 35.6933 173.452 33.3873C170.539 28.6973 166.016 26.79 160.958 24.7224C153.599 21.7814 146.241 20.6685 146.241 15.6599C146.241 12.3211 149.153 10.5721 154.979 10.493C161.493 10.4139 167.012 12.0036 171.534 15.4215V4.29236C166.706 1.43045 160.88 0 154.135 0C148.54 0 143.864 1.35132 140.109 4.05395C136.354 6.75659 134.515 10.6523 134.515 15.8191ZM182.957 39.8264C185.333 46.7422 189.855 52.3068 197.214 55.4862C200.893 57.076 205.032 57.8713 209.63 57.8713C214.229 57.8713 218.368 57.077 222.047 55.4862C236.456 49.524 241.056 32.036 236.38 18.045C233.927 11.1291 229.405 5.56455 222.047 2.3851C218.368 0.795375 214.228 0 209.63 0C205.031 0 200.893 0.794348 197.214 2.3851C182.803 8.34734 178.205 25.8353 182.957 39.8264ZM221.971 41.7336C219.057 45.1525 214.919 46.8213 209.63 46.8213C204.264 46.8213 200.126 45.1515 197.214 41.7336C194.302 38.3158 192.845 34.1025 192.845 28.9357C192.845 23.7688 194.302 19.5556 197.214 16.1367C200.126 12.7178 204.264 11.0489 209.63 11.0489C214.919 11.0489 219.057 12.7188 221.971 16.1367C224.883 19.5545 226.339 23.7678 226.339 28.9357C226.339 34.1025 224.883 38.3158 221.971 41.7336Z"
+                          fill="white"/>
+                </svg>
+            </div>
+            <div class="text">
+                <span>
+                    About AVISO LOGISTICS
+                </span>
+                <p>
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Mauris sollicitudin enim condimentum, luctus justo non, molestie nisl. Aenean et egestas nulla.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                    Fusce gravida, ligula non molestie tristique, justo elit blandit risus
+                </p>
+                <ul>
+                    <li>
+                        Ut tristique pretium tellus, sed fermentum est vestibulum id.
+                    </li>
+                    <li>
+                        Aenean semper, odio sed fringilla blandit, nisl nulla placerat mauris, sit amet commodo mi
+                        turpis at libero.
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="about-list">
+                <li>
+                    <div class="icon">
+
+                    </div>
+                    <span>
+                        Pellentesque
+                    </span>
+                    <p>
+                        logistics may have either an internal focus or an external focus (outbound).
+                    </p>
+                </li>
+                <li>
+                    <div class="icon">
+
+                    </div>
+                    <span>
+                        Indimentum
+                    </span>
+                    <p>
+                        logistics may have either an internal focus or an external focus (outbound).
+                    </p>
+                </li>
+                <li>
+                    <div class="icon">
+
+                    </div>
+                    <span>
+                        Pellentesque
+                    </span>
+                    <p>
+                        logistics may have either an internal focus or an external focus (outbound).
+                    </p>
+                </li>
+                <li>
+                    <div class="icon">
+
+                    </div>
+                    <span>
+                        Indimentum
+                    </span>
+                    <p>
+                        logistics may have either an internal focus or an external focus (outbound).
+                    </p>
+                </li>
+            </ul>
+        </div>
+        <div class="about-block">
+            <div class="block-1">
+                <div class="image">
+                    <img src="img/about-img-2.png" alt="about-img">
+                </div>
+                <div class="text">
+                <span>
+                    Adipiscing elit
+                </span>
+                    <p>
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Mauris sollicitudin enim condimentum, luctus justo non, molestie nisl. Aenean et egestas nulla.
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+                        Fusce gravida, ligula non molestie tristique, justo elit blandit risus
+                    </p>
+                    <ul>
+                        <li>
+                            Ut tristique pretium tellus, sed fermentum est vestibulum id.
+                        </li>
+                        <li>
+                            Aenean semper, odio sed fringilla blandit, nisl nulla placerat mauris, sit amet commodo mi
+                            turpis at libero.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="block-2">
+                <div class="container">
+                    <div>
+                        <span>
+                            Pellentesque habitant tristique senectus
+                        </span>
+                        <div>
+                            <img src="img/about-img-3.png" alt="about-img">
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                            egestas. Mauris sollicitudin enim condimentum, luctus justo non, molestie nisl. Aenean et
+                            egestas nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                            turpis egestas. Fusce gravida, ligula non molestie
+                        </p>
+                        <p>
+                            Mauris sollicitudin enim condimentum, luctus justo non, molestie nisl. Aenean et egestas
+                            nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                            egestas. Fusce gravida, ligula non molestie tristique, justo elit blandit risus, blandit
+                            maximus augue magna accumsan ante. Aliquam bibendum lacus quis nulla dignissim faucibus.
+                            Curabitur varius eros et lacus rutrum consequat.
+                        </p>
+                    </div>
+                    <div class="logo">
+                        <svg width="540" height="276" viewBox="0 0 540 276" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.15">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M272.944 90.6854C280.638 99.7293 288.123 108.906 295.431 117.868C305.762 130.539 315.756 142.79 325.42 153.536C349.544 180.366 378.564 207.368 410.467 220.698C441.815 233.798 476.159 233.623 511.663 206.72L526.62 195.387L517.317 211.674C501.734 238.958 477.545 257.584 450.084 266.662C421.904 275.976 390.28 275.221 361.012 263.435C344.232 256.682 327.97 245.432 312.963 232.389C298.1 219.47 284.448 204.764 272.769 190.954L271.785 189.796L271.777 189.914L266.898 184.19L266.873 184.574C259.179 175.53 251.697 166.353 244.386 157.391C234.054 144.72 224.061 132.469 214.397 121.723C190.272 94.8931 161.252 67.8912 129.347 54.5607C97.9988 41.4642 63.658 41.6361 28.1533 68.5366L13.1938 79.8689L22.497 63.5792C38.0793 36.2954 62.2714 17.6694 89.7327 8.59454C117.913 -0.722695 149.537 0.0325963 178.805 11.8186C195.585 18.5712 211.846 29.8218 226.853 42.8648C241.717 55.7838 255.369 70.4924 267.048 84.2992L268.031 85.4575L268.04 85.3391L272.918 91.0631L272.944 90.6854Z"
+                                      fill="url(#paint0_linear_398_533)"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M44.9858 77.7495C70.6997 62.2546 106.974 55.9303 152.03 80.5819C64.1754 77.1464 50.0107 155.576 82.3364 191.326C105.909 217.395 154.214 221.561 216.704 150.943C230.66 167.619 244.309 184.393 258.389 200.925C229.885 232.851 197.421 259.934 156.049 270.449C70.0825 292.302 13.0997 240.319 1.99002 181.73C-5.35724 142.995 7.34761 100.431 44.9858 77.7495Z"
+                                      fill="#394854"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                      d="M494.819 197.794C469.105 213.289 432.831 219.613 387.775 194.962C475.63 198.397 489.794 119.967 457.468 84.2175C433.896 58.1484 385.588 53.9829 323.101 124.601C309.148 107.925 295.496 91.1504 281.419 74.6184C309.923 42.6929 342.387 15.6092 383.759 5.09421C469.728 -16.7587 526.708 35.2245 537.818 93.8137C545.162 132.548 532.46 175.113 494.819 197.794Z"
+                                      fill="#394854"/>
+                            </g>
+                            <defs>
+                                <linearGradient id="paint0_linear_398_533" x1="13.1938" y1="137.627" x2="526.62"
+                                                y2="137.627" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#298860"/>
+                                    <stop offset="1" stop-color="#65D521"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="our-team">
+        <div class="container">
+            <span class="section-title">
+                Our Team
+            </span>
+            <div class="our-team-wrapper">
+                <div class="our-team-self">
+                    <div class="text">
+                       <span>
+                            Indimentum
+                       </span>
+                        <p>
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                            egestas. Mauris sollicitudin enim condimentum, luctus justo non, molestie nisl. Aenean et
+                            egestas nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                            turpis egestas.Aenean et egestas nulla. Pellentesque habitant morbi tristique senectus et
+                            netus et malesuada fames ac turpis egestas. Fusce gravida, ligula non molestie tristique,
+                            justo elit blandit risus, blandit maximus augue magna accumsan ante. Aliquam bibendum lacus
+                            quis nulla dignissim faucibus. Curabitur varius eros et lacus rutrum consequat.
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img src="img/our-team-img.png" alt="our-team">
+                    </div>
+                </div>
+                <div class="our-team-self">
+                    <div class="text">
+                       <span>
+                            Indimentum
+                       </span>
+                        <p>
+                            Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                            egestas. Mauris sollicitudin enim condimentum, luctus justo non, molestie nisl. Aenean et
+                            egestas nulla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac
+                            turpis egestas.Aenean et egestas nulla. Pellentesque habitant morbi tristique senectus et
+                            netus et malesuada fames ac turpis egestas. Fusce gravida, ligula non molestie tristique,
+                            justo elit blandit risus, blandit maximus augue magna accumsan ante. Aliquam bibendum lacus
+                            quis nulla dignissim faucibus. Curabitur varius eros et lacus rutrum consequat.
+                        </p>
+                    </div>
+                    <div class="image">
+                        <img src="img/our-team-img-2.png" alt="our-team">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="licenses">
+        <div class="container">
+            <div class="licenses-content">
+                <span class="section-title">
+                    Licenses
+                </span>
+                <div class="text">
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris
+                    sollicitudin enim condimentum, luctus justo non, molestie nisl. Aenean et egestas nulla.
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.Aenean
+                    et egestas nulla.
+                </div>
+                <div class="certificates">
+                    <img src="img/certificate-1.png" alt="certificate">
+                    <img src="img/certificate-1.png" alt="certificate">
+                    <img src="img/certificate-1.png" alt="certificate">
+                    <img src="img/certificate-1.png" alt="certificate">
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Подключение футера -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-col">
+            <div class="footer-logo">
+                <img src="img/svg/footer-logo.svg" alt="footer-logo">
+            </div>
+            <p>
+                Transportation and forwarding of goods in the EU countries
+            </p>
+            <span>
+                Privacy policy
+            </span>
+            <span>
+                © 2021 Copyright Aviso logistics.
+            </span>
+        </div>
+        <div class="footer-col">
+            <div class="tab-btn">
+                <a href="#france" class="active">France</a>
+                <a href="#poland">Poland</a>
+                <a href="#germany">Germany</a>
+                <a href="#ukraine">Ukraine</a>
+            </div>
+            <div class="tab-content">
+                <div id="france" class="show">
+                    <div>
+                        <span>
+                            VAT/TVA:
+                        </span>
+                        <span>
+                            PL9462685586
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Mobile:
+                        </span>
+                        <span>
+                            +47 2245 555 777
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            WhatsApp:
+                        </span>
+                        <span>
+                            +47 2245 555 777
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Telegram:
+                        </span>
+                        <span>
+                            AvisoLogistic
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            E-mail:
+                        </span>
+                        <span>
+                            hello@aviso.com
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Adress:
+                        </span>
+                        <span>
+                            ul. Karola Olszewskiego 11, 20-481 Lublin, POLAND
+                        </span>
+                    </div>
+                </div>
+                <div id="poland">
+                    <div>
+                        <span>
+                            VAT/TVA:
+                        </span>
+                        <span>
+                            PL9462685586
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Mobile:
+                        </span>
+                        <span>
+                            +47 9999 888 777
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            WhatsApp:
+                        </span>
+                        <span>
+                            +47 9999 888 777
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Telegram:
+                        </span>
+                        <span>
+                            AvisoLogistic
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            E-mail:
+                        </span>
+                        <span>
+                            hello@aviso.com
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Adress:
+                        </span>
+                        <span>
+                            ul. Karola Olszewskiego 11, 20-481 Lublin, POLAND
+                        </span>
+                    </div>
+                </div>
+                <div id="germany">
+                    <div>
+                        <span>
+                            VAT/TVA:
+                        </span>
+                        <span>
+                            PL9462685586
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Mobile:
+                        </span>
+                        <span>
+                            +47 0000 000 000
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            WhatsApp:
+                        </span>
+                        <span>
+                            +47 0000 000 000
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Telegram:
+                        </span>
+                        <span>
+                            AvisoLogistic
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            E-mail:
+                        </span>
+                        <span>
+                            hello@aviso.com
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Adress:
+                        </span>
+                        <span>
+                            ul. Karola Olszewskiego 11, 20-481 Lublin, POLAND
+                        </span>
+                    </div>
+                </div>
+                <div id="ukraine">
+                    <div>
+                        <span>
+                            VAT/TVA:
+                        </span>
+                        <span>
+                            PL9462685586
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Mobile:
+                        </span>
+                        <span>
+                            +38 5555 777 111
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            WhatsApp:
+                        </span>
+                        <span>
+                            +38 5555 777 111
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Telegram:
+                        </span>
+                        <span>
+                            AvisoLogistic
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            E-mail:
+                        </span>
+                        <span>
+                            hello@aviso.com
+                        </span>
+                    </div>
+                    <div>
+                        <span>
+                            Adress:
+                        </span>
+                        <span>
+                            ul. Karola Olszewskiego 11, 20-481 Lublin, POLAND
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-col">
+            <span class="title">
+                For clients
+            </span>
+            <a href="#">
+                Express delivery
+            </a>
+            <a href="#">
+                Groupage cargo
+            </a>
+            <a href="#">
+                Temperature cargo
+            </a>
+            <a href="#">
+                ADR cargo
+            </a>
+            <a href="#">
+                Calculation request
+            </a>
+            <a href="#">
+                Company
+            </a>
+            <a href="#">
+                Contact
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Подключение скриптов -->
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<!--<script src="js/main.min.js"></script>-->
+<script src="js/main.js"></script>
+</body>
+</html>

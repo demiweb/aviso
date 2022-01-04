@@ -30,6 +30,7 @@
 
 .header-nav {
   align-self: flex-end;
+
   ul {
     display: flex;
     list-style: none;
@@ -60,6 +61,7 @@
 
       &:hover {
         cursor: pointer;
+
         &:after {
           transform: translateY(0);
         }
@@ -76,5 +78,13 @@
     width: 251px;
     height: 100%;
     border-radius: 0;
+
+    &:after {
+      border-radius: 0;
+    }
+
+    span {
+      margin: 0;
+    }
   }
 }

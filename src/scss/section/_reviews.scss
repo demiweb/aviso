@@ -1,0 +1,55 @@
+@import "../common/vars";
+@import "../common/mixins";
+
+.reviews {
+  position: relative;
+}
+
+.reviews-swiper {
+  .swiper-button-prev, .swiper-button-next {
+    top: auto;
+    bottom: 80px;
+  }
+
+  .swiper-button-next {
+    right: calc(43.61% + 107px);
+  }
+  .swiper-button-prev {
+    left: auto;
+    right: calc(43.61% + 107px + 60px);
+  }
+}
+
+.reviews-swiper-slide {
+  display: flex;
+  justify-content: space-between;
+
+  .slide-text {
+    width: 56.39%;
+    margin: 0 107px 0 77px;
+    .section-title {
+      margin: 80px 0;
+      max-width: 440px;
+    }
+    > div {
+      display: flex;
+      align-items: flex-start;
+      padding-left: 100px;
+      svg {
+        margin-right: 43px;
+      }
+      q {
+        max-width: 435px;
+      }
+    }
+  }
+
+  .slide-image {
+    width: 43.61%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

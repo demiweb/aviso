@@ -27,6 +27,20 @@ new Swiper('.seo-swiper', {
     }
 });
 
+new Swiper('.reviews-swiper', {
+    effect: 'fade',
+    fadeEffect: {
+        crossFade: true
+    },
+    direction: 'horizontal',
+    loop: true,
+    speed: 1000,
+    navigation: {
+        prevEl: '.reviews-swiper .swiper-button-prev',
+        nextEl: '.reviews-swiper .swiper-button-next',
+    }
+});
+
 
 // Функия работы dropdown-input
 const dropdownInput = document.querySelectorAll('.dropdown-input')
@@ -116,11 +130,48 @@ if (!map.length) {
                 description.querySelector('.text').style.animationName = 'fade'
 
                 const pos = this.getBBox();
-                const x = pos.x + (pos.width / 2.3)
-                const y = pos.y + (pos.width / 4)
+                const x = pos.x + (pos.width / 2)
+                const y = pos.y + (pos.height / 3)
 
                 description.style.left = x + 'px'
                 description.style.top = y + 'px'
+
+                if (this.id === 'country-5') {
+                    description.style.left = pos.x + 30 + 'px'
+                    description.style.top = pos.y + (pos.height / 4) + 'px'
+                }
+
+                if (this.id === 'country-6') {
+                    description.style.left = pos.x + 50 + 'px'
+                    description.style.top = pos.y + (pos.height - 50) + 'px'
+                }
+
+                if (this.id === 'country-8') {
+                    description.style.left = pos.x + 30 + 'px'
+                    description.style.top = pos.y + (pos.height - 50) + 'px'
+                }
+
+                if (this.id === 'country-12') {
+                    description.style.left = pos.x + (pos.width - 50) + 'px'
+                    description.style.top = pos.y + 12 + 'px'
+                }
+
+                if (this.id === 'country-13') {
+                    description.style.left = pos.x + (pos.width - 50) + 'px'
+                    description.style.top = pos.y + (pos.height - 50) + 'px'
+                }
+
+                if (this.id === 'country-15') {
+                    description.style.left = pos.x + (pos.width / 3.1) + 'px'
+                    description.style.top = pos.y + (pos.height / 2.5) + 'px'
+                    description.classList.remove('description-revert')
+                }
+
+                if (this.id === 'country-24') {
+                    description.style.left = pos.x + 10 + 'px'
+                    description.style.top = pos.y + (pos.height - 50) + 'px'
+                }
+
 
                 description.querySelector('.name').innerText = this.dataset.name
                 description.querySelector('.address').innerText = this.dataset.address
@@ -175,10 +226,29 @@ if (!icons.length) {
     let time = 0
 
     icons.forEach(elem => {
-        time = time + 500
+        // time = time + 500
         const length1 = elem.getTotalLength()
         elem.style.strokeDashoffset = length1
         elem.style.strokeDasharray = length1
-        elem.style.animationDelay = time
+        // elem.style.animationDelay = time
+    })
+}
+
+const formBtn = document.querySelector('#form-next-step')
+
+
+if (!formBtn) {
+
+} else {
+    formBtn.addEventListener('click', function (e) {
+        e.preventDefault()
+
+        const headActive = document.querySelector('form header div.active')
+        if (headActive.nextElementSibling) {
+            headActive.classList.remove('active')
+            headActive.nextElementSibling.classList.add('active')
+            document.querySelector('.first-step').classList.add('d-none')
+            document.querySelector('.second-step').classList.remove('d-none')
+        }
     })
 }
