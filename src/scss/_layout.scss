@@ -43,3 +43,10 @@ body {
 .d-none {
   display: none !important;
 }
+
+.h-80 {
+  height: 80px;
+  width: 100%;
+  background: $primary-color;
+  margin-top: -80px;
+}

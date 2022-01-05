@@ -2,15 +2,25 @@ new Swiper('.hero-swiper', {
     effect: 'creative',
     creativeEffect: {
         prev: {
-            scale: 1.2,
+            scale: 1.1,
         },
         next: {
             scale: 1,
         },
     },
+    autoplay: {
+        delay: 5500
+    },
+    speed: 300,
+
     direction: 'horizontal',
     loop: true,
-    autoplay: true,
+
+    preloadImages: false,
+    lazy: {
+        loadOnTransitionStart: false,
+        loadPrevNext: false,
+    }
 });
 
 new Swiper('.seo-swiper', {
@@ -20,10 +30,16 @@ new Swiper('.seo-swiper', {
     },
     direction: 'horizontal',
     loop: true,
-    speed: 1000,
+    speed: 200,
     navigation: {
         prevEl: '.seo-swiper .swiper-button-prev',
         nextEl: '.seo-swiper .swiper-button-next',
+    },
+
+    preloadImages: false,
+    lazy: {
+        loadOnTransitionStart: false,
+        loadPrevNext: false,
     }
 });
 
@@ -38,6 +54,12 @@ new Swiper('.reviews-swiper', {
     navigation: {
         prevEl: '.reviews-swiper .swiper-button-prev',
         nextEl: '.reviews-swiper .swiper-button-next',
+    },
+
+    preloadImages: false,
+    lazy: {
+        loadOnTransitionStart: false,
+        loadPrevNext: false,
     }
 });
 
@@ -122,65 +144,66 @@ if (!map.length) {
 } else {
     map.forEach(elem => {
         elem.querySelectorAll('path').forEach(country => {
-            country.addEventListener('mousemove', function (elem) {
-                const description = document.querySelector('.map .description')
-                description.querySelector('.circle').style.animationName = 'circle'
-                description.querySelector('.circle-shadow').style.animationName = 'circleShadow'
-                description.querySelector('.line').style.animationName = 'line'
-                description.querySelector('.text').style.animationName = 'fade'
+            country.addEventListener('mouseover', function (elem) {
 
-                const pos = this.getBBox();
-                const x = pos.x + (pos.width / 2)
-                const y = pos.y + (pos.height / 3)
+                if (country.dataset.disable) {
+                    const description = document.querySelector('.map .description')
+                    description.querySelector('.circle').style.animationName = 'circle'
+                    description.querySelector('.circle-shadow').style.animationName = 'circleShadow'
+                    description.querySelector('.line').style.animationName = 'line'
+                    description.querySelector('.text').style.animationName = 'fade'
 
-                description.style.left = x + 'px'
-                description.style.top = y + 'px'
+                    const pos = this.getBBox();
+                    const x = pos.x + (pos.width / 2)
+                    const y = pos.y + (pos.height / 3)
 
-                if (this.id === 'country-5') {
-                    description.style.left = pos.x + 30 + 'px'
-                    description.style.top = pos.y + (pos.height / 4) + 'px'
-                }
+                    description.style.left = x + 'px'
+                    description.style.top = y + 'px'
 
-                if (this.id === 'country-6') {
-                    description.style.left = pos.x + 50 + 'px'
-                    description.style.top = pos.y + (pos.height - 50) + 'px'
-                }
+                    if (this.id === 'country-5') {
+                        description.style.left = pos.x + 30 + 'px'
+                        description.style.top = pos.y + (pos.height / 4) + 'px'
+                    }
 
-                if (this.id === 'country-8') {
-                    description.style.left = pos.x + 30 + 'px'
-                    description.style.top = pos.y + (pos.height - 50) + 'px'
-                }
+                    if (this.id === 'country-6') {
+                        description.style.left = pos.x + 50 + 'px'
+                        description.style.top = pos.y + (pos.height - 50) + 'px'
+                    }
 
-                if (this.id === 'country-12') {
-                    description.style.left = pos.x + (pos.width - 50) + 'px'
-                    description.style.top = pos.y + 12 + 'px'
-                }
+                    if (this.id === 'country-8') {
+                        description.style.left = pos.x + 30 + 'px'
+                        description.style.top = pos.y + (pos.height - 50) + 'px'
+                    }
 
-                if (this.id === 'country-13') {
-                    description.style.left = pos.x + (pos.width - 50) + 'px'
-                    description.style.top = pos.y + (pos.height - 50) + 'px'
-                }
+                    if (this.id === 'country-12') {
+                        description.style.left = pos.x + (pos.width - 50) + 'px'
+                        description.style.top = pos.y + 12 + 'px'
+                    }
 
-                if (this.id === 'country-15') {
-                    description.style.left = pos.x + (pos.width / 3.1) + 'px'
-                    description.style.top = pos.y + (pos.height / 2.5) + 'px'
-                    description.classList.remove('description-revert')
-                }
+                    if (this.id === 'country-13') {
+                        description.style.left = pos.x + (pos.width - 50) + 'px'
+                        description.style.top = pos.y + (pos.height - 50) + 'px'
+                    }
 
-                if (this.id === 'country-24') {
-                    description.style.left = pos.x + 10 + 'px'
-                    description.style.top = pos.y + (pos.height - 50) + 'px'
-                }
+                    if (this.id === 'country-15') {
+                        description.style.left = pos.x + (pos.width / 3.1) + 'px'
+                        description.style.top = pos.y + (pos.height / 2.5) + 'px'
+                        description.classList.remove('description-revert')
+                    }
 
+                    if (this.id === 'country-24') {
+                        description.style.left = pos.x + 10 + 'px'
+                        description.style.top = pos.y + (pos.height - 50) + 'px'
+                    }
 
-                description.querySelector('.name').innerText = this.dataset.name
-                description.querySelector('.address').innerText = this.dataset.address
+                    description.querySelector('.name').innerText = this.dataset.name
+                    description.querySelector('.address').innerText = this.dataset.address
 
-                console.log(pos)
-                if (pos.x < 400) {
-                    description.classList.add('description-revert')
-                } else {
-                    description.classList.remove('description-revert')
+                    if (pos.x < 400) {
+                        description.classList.add('description-revert')
+                    } else {
+                        description.classList.remove('description-revert')
+                    }
                 }
             })
             country.addEventListener('mouseleave', function () {
@@ -192,7 +215,6 @@ if (!map.length) {
 }
 
 // Функия работы tabs
-
 const tabs = document.querySelectorAll('.tab-btn a')
 
 if (!tabs.length) {
@@ -212,11 +234,10 @@ if (!tabs.length) {
             }
 
             document.getElementById(id).classList.add('show')
-
-
         })
     })
 }
+
 
 const icons = document.querySelectorAll('.hero-icons svg path')
 
@@ -234,8 +255,8 @@ if (!icons.length) {
     })
 }
 
+// Переключение формы
 const formBtn = document.querySelector('#form-next-step')
-
 
 if (!formBtn) {
 
@@ -252,3 +273,38 @@ if (!formBtn) {
         }
     })
 }
+
+const anim = document.querySelectorAll('.anim')
+
+if (!anim.length) {
+
+} else {
+    let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            let el = entry.target
+            if (entry.intersectionRatio) {
+                el.style.animation = el.dataset.animDelay + 'ms'
+                el.style.animationDuration = el.dataset.animDuration + 'ms'
+                el.style.animationName = el.dataset.anim
+                observer.unobserve(entry.target)
+            } else {
+
+            }
+        })
+    }, {threshold: 1})
+
+    if (window.innerWidth > 767) {
+        anim.forEach(animate => {
+            observer.observe(animate)
+        })
+    }
+}
+
+
+// lazyload для картинок
+const lazyImg = document.querySelectorAll('.lazyload');
+
+lazyImg.forEach(el => {
+    const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
+    observer.observe();
+})

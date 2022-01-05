@@ -55,9 +55,8 @@
   svg {
     z-index: 2;
 
-    path {
-      transition: all .3s ease;
-      z-index: 5;
+    path[data-disable='false'] {
+      fill: #26684B;
 
       &:hover {
         fill: #26684B;
@@ -65,11 +64,18 @@
         cursor: pointer;
       }
     }
+
+    path {
+      transition: all .3s ease;
+      z-index: 5;
+    }
   }
 
   .description {
     position: absolute;
     z-index: 1;
+
+    pointer-events: none;
 
     .circle {
       position: relative;
