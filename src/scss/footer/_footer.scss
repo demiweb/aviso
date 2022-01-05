@@ -71,11 +71,13 @@
     }
 
     .tab-content {
+
       > div {
         display: none;
         flex-direction: column;
         background: #445562;
         padding: 20px;
+        position: relative;
 
         > div {
           display: flex;
@@ -98,6 +100,12 @@
               width: calc(100% - 135px);
             }
           }
+        }
+
+        > svg {
+          position: absolute;
+          top: 22px;
+          right: 22px;
         }
       }
 

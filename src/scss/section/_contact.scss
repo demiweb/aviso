@@ -1,0 +1,105 @@
+@import "../common/vars";
+@import "../common/mixins";
+
+.contact {
+  .head-page {
+    height: 200px;
+  }
+}
+
+.contact-form {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 80px 0;
+  position: relative;
+  padding: 60px 0;
+  width: 100%;
+  background: $primary-color;
+
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding-right: 125px;
+
+    >span {
+      font-size: 34px;
+      line-height: 40px;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 30px;
+      color: #FFFFFF;
+    }
+
+    label {
+      width: 410px;
+
+      &:not(:last-of-type) {
+        margin-bottom: 20px;
+      }
+
+      input, textarea {
+        width: 100%;
+        border: 1px solid #556C7E;
+        background: #33414B;
+        padding: 16px 15px;
+        font-size: 18px;
+        line-height: 21px;
+        color: #fff;
+        &::placeholder {
+          color: $grey;
+        }
+      }
+
+      input {
+        height: 50px;
+      }
+
+      textarea {
+        height: 181px;
+        resize: none;
+      }
+    }
+
+    button {
+      width: 249px;
+      height: 80px;
+      margin-top: 30px;
+      margin-left: auto;
+    }
+  }
+}
+
+.contact-form-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  .green-mask {
+    background: #65D521;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 10px;
+    z-index: 2;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 5;
+  }
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 21.61%;
+    transform: translateY(-50%);
+    z-index: 5;
+  }
+}
+

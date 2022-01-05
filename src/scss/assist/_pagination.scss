@@ -1,0 +1,56 @@
+@import "../common/vars";
+@import "../common/mixins";
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+
+  ul {
+    display: flex;
+    list-style: none;
+
+    li {
+      &:not(:last-of-type) {
+        margin-right: 8px;
+      }
+
+      a {
+        width: 32px;
+        height: 32px;
+        border: 1px solid #DFE3E8;
+        color: $secondary-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 500;
+
+        &.prev, &.next {
+          background: #DFE3E8;
+          transition: background-color .4s ease;
+
+          &:hover {
+            background: $green;
+          }
+        }
+
+        &.next {
+
+        }
+
+        &.current {
+          color: $green;
+          border: 1px solid $green;
+        }
+
+        span {
+
+        }
+      }
+    }
+  }
+}

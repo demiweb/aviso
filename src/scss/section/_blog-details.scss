@@ -1,0 +1,75 @@
+@import "../common/vars";
+@import "../common/mixins";
+
+.blog-details {
+  .head-page {
+    height: 344px;
+  }
+
+  .section-title {
+    color: #fff;
+  }
+}
+
+.blog-details-description {
+  margin-top: 80px;
+
+  > div {
+    display: flex;
+    align-items: center;
+
+    &:not(:first-of-type) {
+      margin-top: 70px;
+    }
+
+    > div {
+      &:first-of-type {
+        width: 40%;
+        margin-right: 10%;
+      }
+
+      &:last-of-type {
+        width: 50%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      > span {
+        display: block;
+        max-width: 320px;
+        font-size: 36px;
+        line-height: 32px;
+        font-weight: 700;
+        margin-bottom: 50px;
+      }
+
+      > p, li {
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 520px;
+      }
+
+      > p {
+        color: $secondary-color;
+
+
+        a {
+          color: #2D88D1;
+          font-weight: 500;
+        }
+      }
+
+      > ul {
+        margin: 30px 0;
+        padding-left: 24px;
+
+        li {
+          color: $secondary-color;
+        }
+      }
+    }
+  }
+}

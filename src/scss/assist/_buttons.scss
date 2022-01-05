@@ -2,5 +2,9 @@
 @import "../common/vars";
 
 .btn-green {
-  @include btn;
+  @include btn(#fff, linear-gradient(56.01deg, #298860 0%, #65D521 101.79%), none, #fff, $green, none);
+}
+
+.btn-black {
+  @include btn(#323E50, #fff, 3px solid #323E50, $green, #fff, 3px solid $green, none);
 }

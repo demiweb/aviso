@@ -6,3 +6,110 @@
     height: 200px;
   }
 }
+
+.car-park-content {
+
+  > div {
+    &:nth-child(even) {
+      background: linear-gradient(270deg, #FFFFFF 0%, #E4EAF0 100%);
+    }
+
+    &:nth-child(odd) {
+      background: #fff;
+    }
+  }
+
+  .car {
+    padding: 39px 0 30px;
+    border: 1px solid #E1E1E1;
+    box-shadow: 0 0 52px rgba(4, 71, 125, 0.12);
+
+    .container {
+      display: flex;
+      align-items: center;
+
+      .col {
+        &:nth-child(1) {
+          flex: 1;
+        }
+
+        &:nth-child(2) {
+          flex: 3;
+          padding: 0 122px 0 37px;
+
+          > strong {
+            font-size: 26px;
+            line-height: 31px;
+            font-weight: 700;
+            margin-bottom: 9px;
+            display: block;
+          }
+
+          > span {
+            display: inline-block;
+            padding: 3px 15px;
+            background: #556C7E;
+            margin-bottom: 27px;
+            color: #fff;
+          }
+
+          p {
+            font-size: 18px;
+            line-height: 24px;
+            color: $secondary-color;
+            margin-bottom: 30px;
+          }
+
+          ul {
+            display: flex;
+            list-style: none;
+
+            li {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              width: 100px;
+              height: 89px;
+              border: 1px solid #DFE3E8;
+              background: #fff;
+              &:not(:last-of-type) {
+                border-right: none;
+              }
+
+              > strong {
+                font-size: 24px;
+                line-height: 28px;
+                font-weight: 700;
+              }
+
+              > span {
+                font-size: 14px;
+                line-height: 22px;
+                color: #AFAFAF;
+              }
+            }
+          }
+        }
+
+        &:nth-child(3) {
+          flex: 1;
+          align-self: flex-start;
+
+          a {
+            width: 252px;
+            height: 80px;
+
+            &:last-of-type {
+              margin-top: 7px;
+
+              span {
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

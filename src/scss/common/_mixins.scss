@@ -1,33 +1,34 @@
 @import "vars";
 
-@mixin btn {
+@mixin btn($color, $bg, $border, $h-color, $h-bg, $h-border, $br: 5px) {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
+  color: $color;
   text-transform: uppercase;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: $br;
   font-size: 16px;
   line-height: 18px;
   font-weight: 700;
   border: none;
   outline: none;
   position: relative;
-  background: linear-gradient(56.01deg, #298860 0%, #65D521 101.79%);
-
+  background: $bg;
+  border: $border;
+  transition: all .4s ease;
 
   &:after {
     content: '';
     position: absolute;
-    border-radius: 5px;
+    border-radius: $br;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
     opacity: 0;
     transition: opacity .4s ease;
-    background: $green;
+    background: $h-bg;
     z-index: 1;
   }
 
@@ -42,8 +43,12 @@
   }
 
   &:hover {
+    color: $h-color;
+    border: $h-border;
+    cursor: pointer;
     &:after {
       opacity: 1;
+
     }
   }
 }
