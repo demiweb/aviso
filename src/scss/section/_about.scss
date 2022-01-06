@@ -7,14 +7,6 @@
 
 .about-hero, .about-block {
   .text {
-    > span {
-      font-size: 36px;
-      line-height: 42px;
-      font-weight: 700;
-      display: block;
-      margin-bottom: 50px;
-    }
-
     p, li {
       font-size: 16px;
       line-height: 22px;
@@ -22,7 +14,7 @@
     }
 
     p {
-      padding-bottom: 20px;
+      padding: 50px 0 20px;
     }
 
     ul {
@@ -33,7 +25,6 @@
 
 .about-hero {
   display: flex;
-  //align-items: center;
 
   .image {
     width: 50%;
@@ -62,7 +53,6 @@
   .text {
     width: 50%;
     margin-left: 80px;
-    //padding-right: 75px;
     padding: 15% 75px 15% 0;
   }
 }
@@ -71,31 +61,42 @@
   .block-1 {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: end;
-    align-items: center;
+    justify-content: start;
     position: relative;
 
     .image {
       width: 64.23%;
       font-size: 0;
-      img {
-        width: 100%;
-        height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
 
+      .bg {
+        width: 0;
+        overflow: hidden;
+        height: 100%;
+        position: absolute;
+        right: 0;
+
+        img {
+          width: 64.23vw;
+          height: 100%;
+          object-fit: cover;
+        }
       }
     }
 
     .text {
       width: 39.37%;
-      padding-left: 75px;
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
+      padding: 11% 0 11% 75px;
       z-index: 5;
 
-      span {
-        margin: 0;
+      > span {
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: 700;
+        display: block;
       }
 
       p {
@@ -105,6 +106,7 @@
       ul {
         padding: 0 44px 44px 24px;
       }
+
       p, ul {
         width: 100%;
         background: #fff;
@@ -156,6 +158,7 @@
         position: absolute;
         right: 125px;
         bottom: -425px;
+
         svg {
           g {
             //opacity: 1;
@@ -180,11 +183,20 @@
     width: calc((100% / 4) - ((96px * 3) / 4));
 
     .icon {
-      width: 72px;
-      height: 72px;
+      width: 80px;
+      height: 80px;
       border-radius: 100%;
-      background: $green;
+      border: 1px solid $green;
+      background: #fff;
       margin-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 60px;
+        height: 60px;
+      }
     }
 
     span {

@@ -142,8 +142,27 @@ const map = document.querySelectorAll('.map svg')
 if (!map.length) {
 
 } else {
+    let delay = 0
+
     map.forEach(elem => {
         elem.querySelectorAll('path').forEach(country => {
+
+            let observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.intersectionRatio) {
+                        country.style.animation = `zoom-fade 750ms ease ${delay}ms forwards`
+
+                        delay = delay + 25
+                    }
+                })
+            }, {threshold: .6})
+
+            if (window.innerWidth > 767) {
+                map.forEach(animate => {
+                    observer.observe(animate)
+                })
+            }
+
             country.addEventListener('mouseover', function (elem) {
 
                 if (country.dataset.disable) {
@@ -239,19 +258,19 @@ if (!tabs.length) {
 }
 
 
-const icons = document.querySelectorAll('.hero-icons svg path')
+const icons = document.querySelectorAll('.hero-icons svg *')
 
 if (!icons.length) {
 
 } else {
-    let time = 0
+    let time = 2500
 
     icons.forEach(elem => {
-        // time = time + 500
+        // time = time + 300
         const length1 = elem.getTotalLength()
         elem.style.strokeDashoffset = length1
         elem.style.strokeDasharray = length1
-        // elem.style.animationDelay = time
+        elem.style.animationDuration= time + 'ms'
     })
 }
 
@@ -282,22 +301,72 @@ if (!anim.length) {
     let observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             let el = entry.target
-            if (entry.intersectionRatio) {
-                el.style.animation = el.dataset.animDelay + 'ms'
+            if (entry.isIntersecting) {
+                el.style.animationDelay = el.dataset.animDelay + 'ms'
                 el.style.animationDuration = el.dataset.animDuration + 'ms'
                 el.style.animationName = el.dataset.anim
                 observer.unobserve(entry.target)
-            } else {
-
             }
+
         })
-    }, {threshold: 1})
+    }, {threshold: .35})
 
     if (window.innerWidth > 767) {
         anim.forEach(animate => {
             observer.observe(animate)
         })
     }
+}
+
+const animNumbers = document.querySelectorAll('.anim-number')
+
+if (!animNumbers.length) {
+
+} else {
+    let observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.intersectionRatio) {
+                const time = 2000
+
+                let step = 2500
+
+                function outNum(num, elem) {
+                    let n = 0
+
+                    let t = Math.round(time / (num / step))
+
+                    let interval = setInterval(() => {
+                        n = n + step
+
+                        if (n == num) {
+                            clearInterval(interval)
+                        }
+                        elem.innerHTML = n.toLocaleString() + ' +'
+                    }, t)
+                }
+
+                animNumbers.forEach(animNumb => {
+                    const number = animNumb.dataset.numb.replace(/\s/g, '')
+                    outNum(number, animNumb)
+                })
+            }
+        })
+    }, {threshold: 1})
+
+    if (window.innerWidth > 767) {
+        animNumbers.forEach(animate => {
+            observer.observe(animate)
+        })
+    }
+}
+
+
+const worldMap = document.querySelectorAll('.map')
+
+if (!worldMap.length) {
+
+} else {
+
 }
 
 
@@ -308,3 +377,4 @@ lazyImg.forEach(el => {
     const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
     observer.observe();
 })
+

@@ -12,6 +12,7 @@
   display: flex;
   justify-content: space-between;
   padding-top: 80px;
+  margin: 0 14.09% 0 4.86%;
 
   > div {
     color: #fff;
@@ -50,7 +51,7 @@
 .map {
   position: absolute;
   top: 33px;
-  left: 11.8%;
+  left: 0;
 
   svg {
     z-index: 2;
@@ -68,6 +69,7 @@
     path {
       transition: all .3s ease;
       z-index: 5;
+      opacity: 0;
     }
   }
 

@@ -11,13 +11,25 @@
   .swiper-button-prev {
     top: 22px;
     left: auto;
-    right: calc(48.75% + 62px);
+    right: calc(48.75% + 61px);
   }
 
   .swiper-button-next {
     top: 22px;
     left: auto;
     right: calc(48.75%);
+  }
+}
+
+.seo-swiper-wrapper {
+  > div {
+    &:first-of-type {
+      .slide-image {
+        .bg {
+          width: 0;
+        }
+      }
+    }
   }
 }
 
@@ -84,18 +96,17 @@
 
     .bg {
       position: absolute;
-      left: 0;
       right: 0;
       bottom: 0;
       height: 700px;
+      overflow: hidden;
+    }
 
-      img {
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        filter: brightness(.5) opacity(1);
-        object-fit: cover;
-      }
+    img {
+      width: 48.75vw;
+      height: 100%;
+      filter: brightness(.5) opacity(1);
+      object-fit: cover;
     }
 
     svg {
