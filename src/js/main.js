@@ -361,13 +361,9 @@ if (!animNumbers.length) {
 }
 
 
-const worldMap = document.querySelectorAll('.map')
-
-if (!worldMap.length) {
-
-} else {
-
-}
+let rellax = new Rellax('.rellax', {
+    center: true
+});
 
 
 // lazyload для картинок

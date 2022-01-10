@@ -79,9 +79,8 @@
   .image {
     position: absolute;
     left: 0;
-    top: 50%;
     height: 79%;
-    transform: translateY(-50%);
+    margin-top: calc((100% - 79%) / 4);
     z-index: 10;
 
     .bg {
