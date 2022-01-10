@@ -50,3 +50,16 @@ body {
   background: $primary-color;
   margin-top: -80px;
 }
+
+@media screen and (max-width: 991px){
+  .container {
+    max-width: 1440px;
+    padding: 0 20px;
+  }
+
+  .section-title {
+    font-size: 47px;
+    line-height: 50px;
+    font-weight: 700;
+  }
+}

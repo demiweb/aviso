@@ -263,15 +263,19 @@ const icons = document.querySelectorAll('.hero-icons svg *')
 if (!icons.length) {
 
 } else {
-    let time = 2500
 
-    icons.forEach(elem => {
-        // time = time + 300
-        const length1 = elem.getTotalLength()
-        elem.style.strokeDashoffset = length1
-        elem.style.strokeDasharray = length1
-        elem.style.animationDuration= time + 'ms'
-    })
+    if (window.innerWidth > 991) {
+        let time = 2500
+
+        icons.forEach(elem => {
+            const length1 = elem.getTotalLength()
+            elem.style.strokeDashoffset = length1
+            elem.style.strokeDasharray = length1
+            elem.style.animationDuration= time + 'ms'
+        })
+    } else {
+
+    }
 }
 
 // Переключение формы
@@ -311,7 +315,7 @@ if (!anim.length) {
         })
     }, {threshold: .35})
 
-    if (window.innerWidth > 767) {
+    if (window.innerWidth > 991) {
         anim.forEach(animate => {
             observer.observe(animate)
         })
@@ -349,17 +353,24 @@ if (!animNumbers.length) {
                     const number = animNumb.dataset.numb.replace(/\s/g, '')
                     outNum(number, animNumb)
                 })
+                observer.unobserve(entry.target)
             }
         })
     }, {threshold: 1})
 
-    if (window.innerWidth > 767) {
+    if (window.innerWidth > 991) {
         animNumbers.forEach(animate => {
             observer.observe(animate)
         })
     }
 }
 
+const burger = document.querySelector('.header-burger')
+
+burger.addEventListener('click', function () {
+    burger.classList.toggle('open')
+    document.querySelector('.header-content').classList.toggle('show')
+})
 
 let rellax = new Rellax('.rellax', {
     center: true

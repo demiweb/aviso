@@ -7,6 +7,7 @@
   backdrop-filter: blur(3px);
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding-left: 75px;
   position: sticky;
   top: 0;
@@ -16,7 +17,6 @@
 .header-logo {
   width: 190px;
   height: 42px;
-  margin-right: auto;
 
   img {
     width: 100%;
@@ -31,10 +31,20 @@
 .header-nav {
   align-self: flex-end;
 
+}
+
+.header-content {
+  height: 100%;
+  display: flex;
+  flex: auto;
+  justify-content: space-between;
+
   ul {
     display: flex;
     list-style: none;
+    align-self: flex-end;
     margin: 0 auto;
+    justify-self: center;
 
     li {
       padding: 18px 19px 31px;
@@ -68,11 +78,7 @@
       }
     }
   }
-}
 
-.header-btn {
-  margin-left: auto;
-  height: 100%;
 
   a {
     width: 251px;
@@ -86,5 +92,105 @@
     span {
       margin: 0;
     }
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  .header {
+    padding: 0 20px;
+    flex-wrap: wrap;
+  }
+
+  .header-logo {
+    z-index: 20;
+  }
+  .header-burger {
+    display: block;
+    margin-left: auto;
+    z-index: 20;
+
+    span {
+      width: 33px;
+      display: block;
+      height: 2px;
+      background: #fff;
+      position: relative;
+      transition: all .3s ease;
+
+      &:after, &:before {
+        content: '';
+        position: absolute;
+        width: 33px;
+        display: block;
+        height: 2px;
+        right: 0;
+        background: #fff;
+        transition: all .3s ease;
+
+      }
+
+      &:after {
+        top: 8px;
+      }
+
+      &:before {
+        top: -8px;
+      }
+    }
+  }
+
+  .header-burger.open {
+    span {
+      transform: rotate(45deg);
+
+      &:after {
+        transform: rotate(90deg);
+        top: 0;
+      }
+
+      &:before {
+        opacity: 0;
+      }
+    }
+  }
+  .header-content {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $primary-color;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(-120%);
+    transition: all .6s ease-in-out;
+
+    &:after {
+      content: '';
+      position: fixed;
+      top: 80px;
+      right: 0;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    ul {
+      flex-direction: column;
+      padding-top: 112px;
+    }
+
+    a {
+      height: 80px;
+    }
+  }
+
+  .header-content.show {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

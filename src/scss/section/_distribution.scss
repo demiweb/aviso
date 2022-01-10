@@ -63,3 +63,28 @@
     }
   }
 }
+
+@media screen and (max-width: 991px) {
+  .distribution {
+    height: auto;
+    min-height: 100vh;
+  }
+  .distribution-content {
+    padding: 80px 0;
+  }
+  .distribution-icons {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    .icon-self, a {
+      width: calc(100% / 2);
+    }
+
+    a {
+      span {
+        margin-right: 0;
+      }
+    }
+  }
+}
