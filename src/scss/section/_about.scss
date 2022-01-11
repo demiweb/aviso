@@ -121,10 +121,11 @@
 
     .container {
       display: flex;
+      flex-wrap: wrap;
       position: relative;
 
 
-      > div:not(.text, .logo) {
+      > div:not(.text, .logo, .image) {
         width: 50%;
         position: relative;
 
@@ -132,25 +133,30 @@
           font-size: 36px;
           line-height: 42px;
           font-weight: 700;
-          margin-bottom: 85px;
+          padding-bottom: 85px;
           display: block;
           color: #fff;
         }
+      }
+
+      .image {
+        position: absolute;
+        top: 150px;
+        width: 40%;
 
         img {
           width: 100%;
           height: auto;
           position: absolute;
-
         }
       }
 
       .text {
-        margin-left: 65px;
+        padding-left: 63px;
         width: 50%;
 
         p {
-          color: #fff;
+          color: #C2CED7;
         }
       }
 
@@ -158,11 +164,10 @@
         position: absolute;
         right: 125px;
         bottom: -425px;
+        width: 41.86%;
 
         svg {
-          g {
-            //opacity: 1;
-          }
+          width: 100%;
         }
       }
     }
@@ -210,6 +215,129 @@
     p {
       color: $secondary-color;
       text-align: center;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1199px) {
+  .about-hero {
+    flex-direction: column;
+
+    .image {
+      width: 100%;
+      height: calc(100vh - 80px);
+      min-height: 600px;
+
+      .bg {
+        img {
+          width: 100vw;
+        }
+      }
+    }
+
+    .text {
+      width: 100%;
+      margin: 0;
+      padding: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .about-hero {
+    .image {
+      .bg {
+        width: 100%;
+      }
+    }
+
+    .text {
+      padding: 40px 20px 0;
+    }
+  }
+
+  .about-block {
+    .block-1 {
+      flex-direction: column-reverse;
+      position: relative;
+
+      .image {
+        width: 100%;
+        position: relative;
+
+        .bg {
+          position: relative;
+          width: 100%;
+
+          img {
+            width: 100vw;
+          }
+        }
+      }
+
+      .text {
+        width: 100%;
+        padding: 0 20px;
+        z-index: 5;
+
+        p {
+          padding: 30px 0 30px;
+        }
+
+        ul {
+          padding: 0 0 50px 24px;
+        }
+      }
+    }
+
+    .block-2 {
+      background: $primary-color;
+      padding: 80px 0 0;
+
+      .container {
+
+
+        > div:not(.text, .logo, .image) {
+          width: 100%;
+
+          > span {
+            padding-bottom: 50px;
+          }
+        }
+
+        .image {
+          position: relative;
+          top: 0;
+          left: -20px;
+          width: 100vw;
+          padding-top: 80px;
+          font-size: 0;
+
+          img {
+            width: 100vw;
+            height: auto;
+            position: relative;
+          }
+        }
+
+        .text {
+          padding: 0;
+          width: 100%;
+
+          p {
+            padding: 0 0 30px;
+
+            &:not(:first-of-type) {
+              padding: 0;
+            }
+          }
+        }
+
+        .logo {
+          display: none;
+        }
+      }
     }
   }
 }

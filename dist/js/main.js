@@ -416,9 +416,12 @@ burger.addEventListener('click', function () {
     document.querySelector('.header-content').classList.toggle('show')
 })
 
-let rellax = new Rellax('.rellax', {
-    center: true
-});
+
+if (window.innerWidth > 991) {
+    let rellax = new Rellax('.rellax', {
+        center: true,
+    });
+}
 
 
 // lazyload для картинок
