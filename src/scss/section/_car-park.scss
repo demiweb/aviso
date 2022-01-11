@@ -38,6 +38,10 @@
       .col {
         &:nth-child(1) {
           flex: 1;
+          img {
+            width: 299px;
+            height: 180px;
+          }
         }
 
         &:nth-child(2) {
@@ -106,14 +110,6 @@
           a {
             width: 252px;
             height: 80px;
-
-            &:last-of-type {
-              margin-top: 7px;
-
-              span {
-                margin: 0;
-              }
-            }
           }
         }
       }

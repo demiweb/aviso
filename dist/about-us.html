@@ -14,17 +14,19 @@
     <title>Aviso</title>
 </head>
 <body>
-<!-- Подключение хедера -->
+<!-- Подключение хедера не для main page-->
 <header class="header">
     <div class="header-logo">
-        <img src="img/svg/header-logo.svg" alt="">
+        <a href="#">
+            <img src="img/svg/header-logo.svg" alt="logo">
+        </a>
     </div>
     <div class="header-burger">
         <span></span>
     </div>
     <div class="header-content">
         <ul>
-            <li>
+            <li class="active">
                 Company
             </li>
             <li>
@@ -37,18 +39,10 @@
                 Contact
             </li>
         </ul>
-        <a href="#" class="btn-green">
-            <span>
-                Calculation request
-            </span>
-        </a>
+        <p>
+            © 2021 Copyright Aviso logistics.
+        </p>
     </div>
-<!--    <div class="header-nav">-->
-
-<!--    </div>-->
-<!--    <div class="header-btn">-->
-
-<!--    </div>-->
 </header>
 
 <div class="h-80"></div>
@@ -92,22 +86,7 @@
             <ul class="about-list">
                 <li class="anim" data-anim-delay="0" data-anim-duration="1000" data-anim="zoom-fade">
                     <div class="icon">
-                        <svg width="107" height="76" viewBox="0 0 107 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M38 61.9996H68L68.4825 56.4996M17 61.9996H4L4.48246 56.4996M4.48246 56.4996H20.4825M4.48246 56.4996L5.66667 42.9996M68.4825 56.4996H36.4825M68.4825 56.4996L69.6667 42.9996M5.66667 42.9996L9 4.99962H73L69.6667 42.9996M5.66667 42.9996H69.6667"
-                                  stroke="#7D92A4" stroke-width="2"/>
-                            <path d="M104 41.3431L101.023 62H95M104 41.3431L94.5736 25.7451M104 41.3431H76.7907V25.7451H94.5736M94.5736 25.7451L89.969 19H71.969L68 62H73.8605"
-                                  stroke="#7D92A4" stroke-width="2"/>
-                            <ellipse cx="27.7969" cy="63.4231" rx="10.5469" ry="10.5769" stroke="#7D92A4" stroke-width="2"/>
-                            <ellipse cx="85.1719" cy="63.4231" rx="10.5469" ry="10.5769" stroke="#7D92A4" stroke-width="2"/>
-                            <circle cx="27.5" cy="63.4995" r="4.5" stroke="#7D92A4" stroke-width="2"/>
-                            <circle cx="85.5" cy="63.4995" r="4.5" stroke="#7D92A4" stroke-width="2"/>
-                            <circle cx="17.0002" cy="17" r="17" fill="#298860"/>
-                            <line x1="17.3464" y1="4.37113e-08" x2="17.3464" y2="3.26923" stroke="white" stroke-width="2"/>
-                            <path d="M17.0001 9.15384L17.0001 17.6538L24.1924 17.6538" stroke="white" stroke-width="2"/>
-                            <line x1="17.3464" y1="30.7308" x2="17.3464" y2="34.0001" stroke="white" stroke-width="2"/>
-                            <line x1="3.26929" y1="18" x2="5.62668e-05" y2="18" stroke="white" stroke-width="2"/>
-                            <line x1="34" y1="18" x2="30.7308" y2="18" stroke="white" stroke-width="2"/>
-                        </svg>
+                        <img src="img/svg/hero-icon-1.svg" alt="icon">
                     </div>
                     <span>
                         Pellentesque
@@ -118,22 +97,7 @@
                 </li>
                 <li class="anim" data-anim-delay="200" data-anim-duration="1000" data-anim="zoom-fade">
                     <div class="icon">
-                        <svg width="107" height="76" viewBox="0 0 107 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M38 61.9996H68L68.4825 56.4996M17 61.9996H4L4.48246 56.4996M4.48246 56.4996H20.4825M4.48246 56.4996L5.66667 42.9996M68.4825 56.4996H36.4825M68.4825 56.4996L69.6667 42.9996M5.66667 42.9996L9 4.99962H73L69.6667 42.9996M5.66667 42.9996H69.6667"
-                                  stroke="#7D92A4" stroke-width="2"/>
-                            <path d="M104 41.3431L101.023 62H95M104 41.3431L94.5736 25.7451M104 41.3431H76.7907V25.7451H94.5736M94.5736 25.7451L89.969 19H71.969L68 62H73.8605"
-                                  stroke="#7D92A4" stroke-width="2"/>
-                            <ellipse cx="27.7969" cy="63.4231" rx="10.5469" ry="10.5769" stroke="#7D92A4" stroke-width="2"/>
-                            <ellipse cx="85.1719" cy="63.4231" rx="10.5469" ry="10.5769" stroke="#7D92A4" stroke-width="2"/>
-                            <circle cx="27.5" cy="63.4995" r="4.5" stroke="#7D92A4" stroke-width="2"/>
-                            <circle cx="85.5" cy="63.4995" r="4.5" stroke="#7D92A4" stroke-width="2"/>
-                            <circle cx="17.0002" cy="17" r="17" fill="#298860"/>
-                            <line x1="17.3464" y1="4.37113e-08" x2="17.3464" y2="3.26923" stroke="white" stroke-width="2"/>
-                            <path d="M17.0001 9.15384L17.0001 17.6538L24.1924 17.6538" stroke="white" stroke-width="2"/>
-                            <line x1="17.3464" y1="30.7308" x2="17.3464" y2="34.0001" stroke="white" stroke-width="2"/>
-                            <line x1="3.26929" y1="18" x2="5.62668e-05" y2="18" stroke="white" stroke-width="2"/>
-                            <line x1="34" y1="18" x2="30.7308" y2="18" stroke="white" stroke-width="2"/>
-                        </svg>
+                        <img src="img/svg/hero-icon-2.svg" alt="icon">
                     </div>
                     <span>
                         Indimentum
@@ -144,22 +108,7 @@
                 </li>
                 <li class="anim" data-anim-delay="400" data-anim-duration="1000" data-anim="zoom-fade">
                     <div class="icon">
-                        <svg width="107" height="76" viewBox="0 0 107 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M38 61.9996H68L68.4825 56.4996M17 61.9996H4L4.48246 56.4996M4.48246 56.4996H20.4825M4.48246 56.4996L5.66667 42.9996M68.4825 56.4996H36.4825M68.4825 56.4996L69.6667 42.9996M5.66667 42.9996L9 4.99962H73L69.6667 42.9996M5.66667 42.9996H69.6667"
-                                  stroke="#7D92A4" stroke-width="2"/>
-                            <path d="M104 41.3431L101.023 62H95M104 41.3431L94.5736 25.7451M104 41.3431H76.7907V25.7451H94.5736M94.5736 25.7451L89.969 19H71.969L68 62H73.8605"
-                                  stroke="#7D92A4" stroke-width="2"/>
-                            <ellipse cx="27.7969" cy="63.4231" rx="10.5469" ry="10.5769" stroke="#7D92A4" stroke-width="2"/>
-                            <ellipse cx="85.1719" cy="63.4231" rx="10.5469" ry="10.5769" stroke="#7D92A4" stroke-width="2"/>
-                            <circle cx="27.5" cy="63.4995" r="4.5" stroke="#7D92A4" stroke-width="2"/>
-                            <circle cx="85.5" cy="63.4995" r="4.5" stroke="#7D92A4" stroke-width="2"/>
-                            <circle cx="17.0002" cy="17" r="17" fill="#298860"/>
-                            <line x1="17.3464" y1="4.37113e-08" x2="17.3464" y2="3.26923" stroke="white" stroke-width="2"/>
-                            <path d="M17.0001 9.15384L17.0001 17.6538L24.1924 17.6538" stroke="white" stroke-width="2"/>
-                            <line x1="17.3464" y1="30.7308" x2="17.3464" y2="34.0001" stroke="white" stroke-width="2"/>
-                            <line x1="3.26929" y1="18" x2="5.62668e-05" y2="18" stroke="white" stroke-width="2"/>
-                            <line x1="34" y1="18" x2="30.7308" y2="18" stroke="white" stroke-width="2"/>
-                        </svg>
+                        <img src="img/svg/hero-icon-3.svg" alt="icon">
                     </div>
                     <span>
                         Pellentesque
@@ -170,22 +119,7 @@
                 </li>
                 <li class="anim" data-anim-delay="600" data-anim-duration="1000" data-anim="zoom-fade">
                     <div class="icon">
-                        <svg width="107" height="76" viewBox="0 0 107 76" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M38 61.9996H68L68.4825 56.4996M17 61.9996H4L4.48246 56.4996M4.48246 56.4996H20.4825M4.48246 56.4996L5.66667 42.9996M68.4825 56.4996H36.4825M68.4825 56.4996L69.6667 42.9996M5.66667 42.9996L9 4.99962H73L69.6667 42.9996M5.66667 42.9996H69.6667"
-                                  stroke="#7D92A4" stroke-width="2"/>
-                            <path d="M104 41.3431L101.023 62H95M104 41.3431L94.5736 25.7451M104 41.3431H76.7907V25.7451H94.5736M94.5736 25.7451L89.969 19H71.969L68 62H73.8605"
-                                  stroke="#7D92A4" stroke-width="2"/>
-                            <ellipse cx="27.7969" cy="63.4231" rx="10.5469" ry="10.5769" stroke="#7D92A4" stroke-width="2"/>
-                            <ellipse cx="85.1719" cy="63.4231" rx="10.5469" ry="10.5769" stroke="#7D92A4" stroke-width="2"/>
-                            <circle cx="27.5" cy="63.4995" r="4.5" stroke="#7D92A4" stroke-width="2"/>
-                            <circle cx="85.5" cy="63.4995" r="4.5" stroke="#7D92A4" stroke-width="2"/>
-                            <circle cx="17.0002" cy="17" r="17" fill="#298860"/>
-                            <line x1="17.3464" y1="4.37113e-08" x2="17.3464" y2="3.26923" stroke="white" stroke-width="2"/>
-                            <path d="M17.0001 9.15384L17.0001 17.6538L24.1924 17.6538" stroke="white" stroke-width="2"/>
-                            <line x1="17.3464" y1="30.7308" x2="17.3464" y2="34.0001" stroke="white" stroke-width="2"/>
-                            <line x1="3.26929" y1="18" x2="5.62668e-05" y2="18" stroke="white" stroke-width="2"/>
-                            <line x1="34" y1="18" x2="30.7308" y2="18" stroke="white" stroke-width="2"/>
-                        </svg>
+                        <img src="img/svg/hero-icon-4.svg" alt="icon">
                     </div>
                     <span>
                         Indimentum
@@ -628,6 +562,14 @@
             <a href="#">
                 Contact
             </a>
+        </div>
+        <div class="policy">
+             <span>
+                Privacy policy
+            </span>
+            <span>
+                © 2021 Copyright Aviso logistics.
+            </span>
         </div>
     </div>
 </footer>

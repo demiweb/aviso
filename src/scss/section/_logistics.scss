@@ -16,6 +16,7 @@
 
   > div {
     color: #fff;
+    z-index: 5;
 
     &:first-of-type {
       display: flex;
@@ -55,6 +56,9 @@
 
   svg {
     z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
     path[data-disable='false'] {
       fill: #26684B;
@@ -151,3 +155,125 @@
   }
 }
 
+
+@media screen and (max-width: 1439px) {
+  .logistics-content {
+    margin: 0 50px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .logistics-content {
+    > div {
+
+      &:first-of-type {
+      }
+
+      span {
+        &:first-of-type {
+          font-size: 56px;
+          line-height: 65px;
+        }
+      }
+
+      p {
+        font-size: 20px;
+        line-height: 28px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .logistics-content {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+
+    > div {
+
+      span {
+        &:first-of-type {
+          font-size: 47px;
+          line-height: 50px;
+        }
+
+        &:last-of-type {
+          font-size: 16px;
+          line-height: 18px;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+  }
+  .map {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-top: -35%;
+
+    .description {
+      transform: rotate(-90deg);
+
+      .circle {
+        width: 5px;
+        height: 5px;
+        .circle-shadow {
+          width: 5px;
+          height: 5px;
+        }
+        .line {
+          width: 247px;
+          right: 0;
+          top: 2px;
+        }
+      }
+
+      .text {
+        transform: rotate(90deg);
+        top: -19px;
+        left: -353px;
+      }
+    }
+
+    .description.description-revert {
+      transform: rotate(-90deg);
+
+      .text {
+        transform: rotate(90deg);
+        text-align: left;
+      }
+    }
+
+    svg {
+      path {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+  .map {
+    margin-top: -30%;
+  }
+}
+
+
+@media screen and (max-width: 575px) {
+  .map {
+    margin-top: 0;
+    .description {
+      .text {
+        transform: rotate(90deg);
+        top: -19px;
+        left: -256px;
+      }
+    }
+  }
+}

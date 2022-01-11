@@ -10,29 +10,46 @@
   justify-content: center;
   position: absolute;
 
-  &:after {
-    content: '';
-  }
+
 
   svg {
     z-index: 10;
   }
 
-  &:before {
+  &:after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(56.01deg, #298860 0%, #65D521 101.79%);
     opacity: 0;
+    background: linear-gradient(56.01deg, #298860 0%, #65D521 101.79%);
     transition: opacity .4s ease;
   }
 
+  &:before {
+    display: flex;
+    justify-content: center;
+    opacity: 1;
+    z-index: 5;
+  }
+
   &:hover {
-    &:before {
+    &:after {
       opacity: 1;
     }
+  }
+}
+
+.swiper-button-prev-custom {
+  &:before {
+    content: url("../img/svg/slider-arrow-left.svg");
+  }
+}
+
+.swiper-button-next-custom {
+  &:before {
+    content: url("../img/svg/slider-arrow-right.svg");
   }
 }

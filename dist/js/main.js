@@ -23,6 +23,36 @@ new Swiper('.hero-swiper', {
     }
 });
 
+new Swiper('.news-swiper', {
+    autoplay: false,
+    speed: 300,
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 3,
+    spaceBetween: 30,
+    navigation: {
+        prevEl: '.news-swiper .swiper-button-prev',
+        nextEl: '.news-swiper .swiper-button-next',
+    },
+    preloadImages: false,
+    lazy: {
+        loadOnTransitionStart: false,
+        loadPrevNext: false,
+    },
+
+    breakpoints: {
+        1199: {
+            slidesPerView: 3,
+        },
+        767: {
+            slidesPerView: 2,
+        },
+        0: {
+            slidesPerView: 1,
+        },
+    }
+});
+
 new Swiper('.seo-swiper', {
     effect: 'fade',
     fadeEffect: {
@@ -73,11 +103,6 @@ if (!dropdownInput.length) {
 
     dropdownInput.forEach(input => {
         input.addEventListener('click', function (e) {
-            // dropdownInput.forEach(content => {
-            //     content.classList.remove('open')
-            //     content.querySelector('.dropdown-content').style.maxHeight = null
-            // })
-
             const dropdownContent = this.querySelector('.dropdown-content')
 
             if (this.classList.contains('open')) {
@@ -144,6 +169,8 @@ if (!map.length) {
 } else {
     let delay = 0
 
+    const description = document.querySelector('.map .description')
+
     map.forEach(elem => {
         elem.querySelectorAll('path').forEach(country => {
 
@@ -157,62 +184,72 @@ if (!map.length) {
                 })
             }, {threshold: .6})
 
-            if (window.innerWidth > 767) {
+            if (window.innerWidth > 991) {
                 map.forEach(animate => {
                     observer.observe(animate)
                 })
+            } else {
+
             }
 
-            country.addEventListener('mouseover', function (elem) {
-
+            country.addEventListener('mouseover', function () {
                 if (country.dataset.disable) {
-                    const description = document.querySelector('.map .description')
                     description.querySelector('.circle').style.animationName = 'circle'
                     description.querySelector('.circle-shadow').style.animationName = 'circleShadow'
                     description.querySelector('.line').style.animationName = 'line'
                     description.querySelector('.text').style.animationName = 'fade'
 
-                    const pos = this.getBBox();
-                    const x = pos.x + (pos.width / 2)
-                    const y = pos.y + (pos.height / 3)
+                    let pos = this.getBBox();
 
-                    description.style.left = x + 'px'
-                    description.style.top = y + 'px'
+                    let x = pos.x + (pos.width / 2)
+                    let y = pos.y + (pos.height / 3)
 
-                    if (this.id === 'country-5') {
+                    if (window.innerWidth < 991) {
+                        let x = ((pos.x + (pos.width / 2)) / 880 * 100) * (window.innerWidth / 100)
+                        let y = ((pos.y + (pos.height / 2.3)) / 852 * 100) * (elem.clientHeight / 100)
+
+                        description.style.left = x + 'px'
+                        description.style.top = y + 'px'
+                    }
+                    else if (this.id === 'country-5') {
                         description.style.left = pos.x + 30 + 'px'
                         description.style.top = pos.y + (pos.height / 4) + 'px'
                     }
 
-                    if (this.id === 'country-6') {
+                    else if (this.id === 'country-6') {
                         description.style.left = pos.x + 50 + 'px'
                         description.style.top = pos.y + (pos.height - 50) + 'px'
                     }
 
-                    if (this.id === 'country-8') {
+                    else if (this.id === 'country-8') {
                         description.style.left = pos.x + 30 + 'px'
                         description.style.top = pos.y + (pos.height - 50) + 'px'
                     }
 
-                    if (this.id === 'country-12') {
+                    else if (this.id === 'country-12') {
                         description.style.left = pos.x + (pos.width - 50) + 'px'
                         description.style.top = pos.y + 12 + 'px'
                     }
 
-                    if (this.id === 'country-13') {
+                    else if (this.id === 'country-13') {
                         description.style.left = pos.x + (pos.width - 50) + 'px'
                         description.style.top = pos.y + (pos.height - 50) + 'px'
                     }
 
-                    if (this.id === 'country-15') {
+                    else if (this.id === 'country-15') {
                         description.style.left = pos.x + (pos.width / 3.1) + 'px'
                         description.style.top = pos.y + (pos.height / 2.5) + 'px'
                         description.classList.remove('description-revert')
                     }
 
-                    if (this.id === 'country-24') {
+                    else if (this.id === 'country-24') {
                         description.style.left = pos.x + 10 + 'px'
                         description.style.top = pos.y + (pos.height - 50) + 'px'
+                    }
+
+                    else {
+                        description.style.left = x + 'px'
+                        description.style.top = y + 'px'
                     }
 
                     description.querySelector('.name').innerText = this.dataset.name
@@ -225,6 +262,7 @@ if (!map.length) {
                     }
                 }
             })
+
             country.addEventListener('mouseleave', function () {
                 const descriptionAllItems = document.querySelectorAll('.map .description *')
                 descriptionAllItems.forEach(item => item.style.animationName = 'none')
@@ -232,6 +270,7 @@ if (!map.length) {
         })
     })
 }
+
 
 // Функия работы tabs
 const tabs = document.querySelectorAll('.tab-btn a')
@@ -271,7 +310,7 @@ if (!icons.length) {
             const length1 = elem.getTotalLength()
             elem.style.strokeDashoffset = length1
             elem.style.strokeDasharray = length1
-            elem.style.animationDuration= time + 'ms'
+            elem.style.animationDuration = time + 'ms'
         })
     } else {
 
@@ -361,6 +400,11 @@ if (!animNumbers.length) {
     if (window.innerWidth > 991) {
         animNumbers.forEach(animate => {
             observer.observe(animate)
+        })
+    } else {
+        animNumbers.forEach(animNumb => {
+            const number = animNumb.dataset.numb
+            animNumb.innerHTML = number + ' +'
         })
     }
 }

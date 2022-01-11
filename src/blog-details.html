@@ -12,8 +12,8 @@
     <title>Aviso</title>
 </head>
 <body>
-<!-- Подключение хедера -->
-@@include('parts/header.html')
+<!-- Подключение хедера не для main page-->
+@@include('parts/header-pages.html')
 
 <main>
     <section class="blog-details">
@@ -54,20 +54,16 @@
         </div>
         <div class="container">
             <div class="blog-details-description">
-                <!--                    <div class="align-left">-->
-                <!--                        -->
-                <!--                    </div>-->
-                <img class="lazyload anim align-right" data-anim-delay="300" data-anim-duration="1000"
-                     data-anim="zoom-fade" data-src="img/blog-details-img-1.png" alt="blog-img">
+                <img class="lazyload align-right" data-src="img/blog-details-img-1.png" alt="blog-img">
 
-                <h3 class="anim align-left" data-anim-delay="0" data-anim-duration="1000" data-anim="fade-up-2">
+                <h3>
                     Consectetur habitant
                 </h3>
-                <p class="anim align-left" data-anim-delay="200" data-anim-duration="1000" data-anim="fade-up-2">
+                <p>
                     Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
                     egestas.
                 </p>
-                <ul class="anim align-left" data-anim-delay="400" data-anim-duration="1000" data-anim="fade-up-2">
+                <ul>
                     <li>
                         Ut tristique pretium tellus, sed fermentum est vestibulum id.
                     </li>
@@ -82,24 +78,22 @@
                         Aenean semper, odio sed fringilla blandi
                     </li>
                 </ul>
-                <p class="anim align-left" data-anim-delay="600" data-anim-duration="1000" data-anim="fade-up-2">
+                <p>
                     Mauris sollicitudin enim condimentum, luctus justo non, molestie nisl. Aenean et egestas
                     nulla. Pellentesque habitant morbi tristique senectus et netus
                 </p>
 
-                <!--                    <div class="align-right " >-->
-                <!--                    </div>-->
-                <img class="lazyload anim align-left" data-anim-delay="300" data-anim-duration="1000"
-                     data-anim="zoom-fade" data-src="img/blog-details-img-2.png" alt="blog-img">
-                <h3 class="anim align-right" data-anim-delay="0" data-anim-duration="1000" data-anim="fade-up-2">
+<!--                <img class="lazyload align-left" data-src="img/blog-details-img-2.png" alt="blog-img">-->
+                <h3>
                     Pellentesque habitant morbi
                 </h3>
-                <p class="anim align-right" data-anim-delay="200" data-anim-duration="1000" data-anim="fade-up-2">
+
+                <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc porta fringilla ullamcorper.
                     Morbi felis orci, lacinia a velit et, <a href="#">sodales condimentum metus</a>. Nulla non
                     fermentum nisl. , sit amet feugiat lorem. Curabitur sed erat vel tellus hendrerit tincidunt.
                 </p>
-                <ul class="anim align-right" data-anim-delay="400" data-anim-duration="1000" data-anim="fade-up-2">
+                <ul>
                     <li>
                         Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
                         egestas.
@@ -112,10 +106,39 @@
                         mi turpis at libero. nisl nulla placerat mauris
                     </li>
                 </ul>
-                <p class="anim align-right" data-anim-delay="600" data-anim-duration="1000" data-anim="fade-up-2">
-                    Ut tristique pretium tellus, sed fermentum es efficitur feugiat enim a euismod
-                    sollicitudin ac lectus sed efficitur feugiat enim a euismod sollicitudin ac lectus sed
-                    feugiat enim a euismod sollicitudin ac lectus sed tristique pretium tellus
+                <p>
+                    Ut tristique pretium tellus, sed fermentum es efficitur feugiat enim a euismod sollicitudin ac
+                    lectus sed efficitur feugiat enim a euismod sollicitudin ac lectus sed feugiat enim a euismod
+                    sollicitudin ac lectus sed tristique pretium tellus
+                </p>
+
+                <img class="lazyload align-right" data-src="img/blog-details-img-1.png" alt="blog-img">
+
+                <h3>
+                    Consectetur habitant
+                </h3>
+                <p>
+                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                    egestas.
+                </p>
+                <ul>
+                    <li>
+                        Ut tristique pretium tellus, sed fermentum est vestibulum id.
+                    </li>
+                    <li>
+                        Aenean semper, odio sed fringilla blandit, nisl nulla placerat mauris, sit amet commodo
+                        mi turpis at libero.
+                    </li>
+                    <li>
+                        Ut tristique pretium tellus, sed fermentum est vestibulum id.
+                    </li>
+                    <li>
+                        Aenean semper, odio sed fringilla blandi
+                    </li>
+                </ul>
+                <p>
+                    Mauris sollicitudin enim condimentum, luctus justo non, molestie nisl. Aenean et egestas
+                    nulla. Pellentesque habitant morbi tristique senectus et netus
                 </p>
             </div>
         </div>
