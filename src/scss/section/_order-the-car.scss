@@ -1,0 +1,15 @@
+@import "../common/vars";
+@import "../common/mixins";
+
+.order-the-car {
+  .head-page {
+    height: 200px;
+  }
+}
+
+.order-the-car-content {
+  padding-bottom: 80px;
+  .car-self {
+    background: linear-gradient(270deg, #FFFFFF 0%, #E4EAF0 100%);
+  }
+}

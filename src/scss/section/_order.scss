@@ -2,7 +2,7 @@
 @import "../common/vars";
 
 .order {
-  padding: 241px 0 100px;
+  padding: 0 0 100px;
 
   .section-title {
     max-width: 450px;
@@ -210,8 +210,18 @@
           font-size: 18px;
           line-height: 22px;
 
+          &:after {
+            content: ' +';
+          }
+
           &:hover {
             cursor: pointer;
+          }
+        }
+
+        .accordion-title.open {
+          &:after {
+            content: ' -';
           }
         }
 
@@ -389,7 +399,7 @@
 
 @media screen and (max-width: 991px) {
   .order {
-    padding: 426px 0 80px;
+    padding: 0 0 80px;
 
     .section-title {
       max-width: 450px;

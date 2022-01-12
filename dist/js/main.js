@@ -152,7 +152,6 @@ if (!accordion.length) {
             if (!this.classList.contains('open')) {
                 this.classList.add('open')
                 accordionContent.style.maxHeight = accordionContent.scrollHeight + 'px'
-
             } else {
                 this.classList.remove('open')
                 accordionContent.style.maxHeight = null
@@ -296,7 +295,7 @@ if (!tabs.length) {
     })
 }
 
-
+// Анимация иконок в секции hero
 const icons = document.querySelectorAll('.hero-icons svg *')
 
 if (!icons.length) {
@@ -336,6 +335,7 @@ if (!formBtn) {
     })
 }
 
+// Функция анимации элементов
 const anim = document.querySelectorAll('.anim')
 
 if (!anim.length) {
@@ -361,6 +361,7 @@ if (!anim.length) {
     }
 }
 
+// Функция анимации цифер
 const animNumbers = document.querySelectorAll('.anim-number')
 
 if (!animNumbers.length) {
@@ -409,6 +410,7 @@ if (!animNumbers.length) {
     }
 }
 
+// Функция работы бургера
 const burger = document.querySelector('.header-burger')
 
 burger.addEventListener('click', function () {
