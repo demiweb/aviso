@@ -414,6 +414,8 @@ const burger = document.querySelector('.header-burger')
 burger.addEventListener('click', function () {
     burger.classList.toggle('open')
     document.querySelector('.header-content').classList.toggle('show')
+    document.querySelector('body').classList.toggle('no-scroll')
+    document.querySelector('.header').classList.toggle('dark-bg')
 })
 
 

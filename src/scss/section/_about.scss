@@ -1,10 +1,6 @@
 @import "../common/vars";
 @import "../common/mixins";
 
-.about {
-
-}
-
 .about-hero, .about-block {
   .text {
     p, li {
@@ -165,9 +161,12 @@
         right: 125px;
         bottom: -425px;
         width: 41.86%;
+        overflow: hidden;
 
-        svg {
-          width: 100%;
+        video {
+          width: 101%;
+          height: 100%;
+          margin-left: -.5%;
         }
       }
     }
@@ -337,6 +336,28 @@
         .logo {
           display: none;
         }
+      }
+    }
+  }
+
+  .about-list {
+    flex-wrap: wrap;
+
+    li {
+      width: calc((100% / 2) - 15px);
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .about-list {
+    flex-wrap: wrap;
+
+    li {
+      width: 100%;
+      &:last-of-type {
+        margin-bottom: 0;
       }
     }
   }
