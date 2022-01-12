@@ -37,6 +37,7 @@
       .col {
         &:nth-child(1) {
           flex: 1;
+
           img {
             width: 299px;
             height: 180px;
@@ -45,7 +46,7 @@
 
         &:nth-child(2) {
           flex: 3;
-          padding: 0 122px 0 37px;
+          padding: 0 5% 0 2.86%;
 
           > strong {
             font-size: 26px;
@@ -83,6 +84,7 @@
               height: 89px;
               border: 1px solid #DFE3E8;
               background: #fff;
+
               &:not(:last-of-type) {
                 border-right: none;
               }
@@ -109,6 +111,120 @@
           a {
             width: 252px;
             height: 80px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .car-park-content {
+    .car {
+      .container {
+        flex-wrap: wrap;
+
+        .col {
+          &:nth-child(1) {
+            flex: 0 0 30%;
+
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+
+          &:nth-child(2) {
+            flex: 0 0 70%;
+            padding: 0 20px;
+          }
+
+          &:nth-child(3) {
+            flex: 0 0 100%;
+
+            a {
+              margin: 30px 0 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .car-park-content {
+    .car {
+      .container {
+        flex-wrap: wrap;
+
+        .col {
+          &:nth-child(1) {
+            flex: 0 0 100%;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+
+            img {
+              width: 50%;
+              height: auto;
+            }
+          }
+
+          &:nth-child(2) {
+            flex: 0 0 100%;
+          }
+
+          &:nth-child(3) {
+            flex: 0 0 100%;
+
+            a {
+              margin: 30px 0 0 auto;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .car-park-content {
+    .car {
+      .container {
+        .col {
+          &:nth-child(1) {
+            img {
+              width: 90%;
+              object-fit: cover;
+            }
+          }
+
+          &:nth-child(2) {
+            flex: 0 0 100%;
+            padding: 0;
+
+            ul {
+              li {
+                width: calc(100% / 4);
+                height: auto;
+                padding: 20px 0;
+
+                > strong {
+                  font-size: 17px;
+                  line-height: 20px;
+                }
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            flex: 0 0 100%;
+
+            a {
+              width: 100%;
+              margin: 30px 0 50px;
+            }
           }
         }
       }

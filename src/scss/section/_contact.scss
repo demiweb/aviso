@@ -21,9 +21,10 @@
   form {
     display: flex;
     flex-direction: column;
-    padding-right: 125px;
+    padding-right: 9.68%;
+    width: 41.47%;
 
-    >span {
+    > span {
       font-size: 34px;
       line-height: 40px;
       font-weight: 700;
@@ -33,7 +34,7 @@
     }
 
     label {
-      width: 410px;
+      width: 100%;
 
       &:not(:last-of-type) {
         margin-bottom: 20px;
@@ -47,6 +48,8 @@
         font-size: 18px;
         line-height: 21px;
         color: #fff;
+        outline: none;
+
         &::placeholder {
           color: $grey;
         }
@@ -76,6 +79,7 @@
   top: 0;
   left: 0;
   bottom: 0;
+  width: 56.66%;
 
   .green-mask {
     background: #65D521;
@@ -94,12 +98,75 @@
     position: relative;
     z-index: 5;
   }
+
   svg {
     position: absolute;
     top: 50%;
     left: 21.61%;
     transform: translateY(-50%);
     z-index: 5;
+  }
+}
+
+.contact-form-bg-md {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .contact {
+    .container {
+      padding: 0 20px;
+    }
+  }
+  .contact-form {
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    transform: translateX(-20px);
+
+    form {
+      padding: 0 10%;
+      width: 80%;
+    }
+  }
+  .contact-form-bg {
+    .green-mask {
+      left: 0;
+    }
+
+    svg {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .contact-form-bg-xl {
+    display: none;
+  }
+
+  .contact-form-bg-md {
+    display: block;
+    width: 100%;
+    position: relative;
+
+    .green-mask {
+      top: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .contact-form {
+    form {
+      padding: 0 20px;
+      width: 100%;
+
+      button {
+        width: 100%;
+      }
+    }
   }
 }
 
