@@ -285,10 +285,6 @@ body {
   pointer-events: auto;
 }
 
-.header-content > ul > li.open {
-  padding: 20px 0 0;
-}
-
 .header-content > ul > li.active:after {
   content: "";
   position: absolute;
