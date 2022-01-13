@@ -16,6 +16,7 @@
   padding: 60px 0;
   width: 100%;
   background: $primary-color;
+  border-radius: 5px;
 
 
   form {
@@ -97,6 +98,7 @@
     height: 100%;
     position: relative;
     z-index: 5;
+    border-radius: 5px 0 0 5px;
   }
 
   svg {
@@ -133,6 +135,10 @@
   .contact-form-bg {
     .green-mask {
       left: 0;
+    }
+
+    img {
+      border-radius: 0;
     }
 
     svg {

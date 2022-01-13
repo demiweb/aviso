@@ -67,6 +67,7 @@
         font-weight: 700;
         color: $grey;
         text-decoration: none;
+        border-radius: 5px 5px 0 0;
       }
 
       a.active {
@@ -83,6 +84,7 @@
         background: #445562;
         padding: 20px;
         position: relative;
+        border-radius: 0 5px 5px 5px;
 
         > div {
           display: flex;

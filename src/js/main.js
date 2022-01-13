@@ -55,7 +55,6 @@ new Swiper('.hero-swiper', {
     speed: 300,
 
     direction: 'horizontal',
-    loop: true,
 
     preloadImages: false,
     lazy: {
@@ -68,7 +67,6 @@ new Swiper('.news-swiper', {
     autoplay: false,
     speed: 300,
     direction: 'horizontal',
-    loop: true,
     slidesPerView: 3,
     spaceBetween: 30,
     navigation: {
@@ -100,7 +98,6 @@ new Swiper('.seo-swiper', {
         crossFade: true
     },
     direction: 'horizontal',
-    loop: true,
     speed: 200,
     navigation: {
         prevEl: '.seo-swiper .swiper-button-prev',
@@ -120,7 +117,6 @@ new Swiper('.reviews-swiper', {
         crossFade: true
     },
     direction: 'horizontal',
-    loop: true,
     speed: 1000,
     navigation: {
         prevEl: '.reviews-swiper .swiper-button-prev',
