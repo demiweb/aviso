@@ -351,14 +351,17 @@
 }
 
 @media screen and (max-width: 575px) {
+  .about-hero {
+    .image {
+      min-height: 375px;
+      max-height: 375px;
+    }
+  }
   .about-list {
     flex-wrap: wrap;
 
     li {
-      width: 100%;
-      &:last-of-type {
-        margin-bottom: 0;
-      }
+
     }
   }
 }
