@@ -3895,9 +3895,9 @@ button {
     height: calc(100vh - 79px);
     margin: 0;
     overflow: hidden;
-    -webkit-transform: translateY(-120%);
-        -ms-transform: translateY(-120%);
-            transform: translateY(-120%);
+    -webkit-transform: translateY(-200%);
+        -ms-transform: translateY(-200%);
+            transform: translateY(-200%);
     -webkit-transition: all 0.6s ease-in-out;
     -o-transition: all 0.6s ease-in-out;
     transition: all 0.6s ease-in-out;
