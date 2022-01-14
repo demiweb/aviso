@@ -130,7 +130,7 @@ new Swiper('.reviews-swiper', {
     }
 });
 
-// Функия работы dropdown
+// Функия работы dropdown-menu
 const dropdownMenu = document.querySelectorAll('.dropdown-menu')
 
 if (!dropdownMenu.length) {
@@ -151,15 +151,18 @@ if (!dropdownMenu.length) {
 
         if (window.innerWidth < 991) {
             dropdownMenu.forEach(dropdown => {
-                dropdown.addEventListener('click', function () {
-                    if (dropdownContent.classList.contains('open')) {
+                dropdown.addEventListener('click', function (e) {
+
+                    if (this.classList.contains('open')) {
+                        console.log('y')
+
                         this.classList.remove('open')
-                        dropdownContent.classList.remove('open')
+                        dropdownContent.classList.remove('show')
                         dropdownContent.style.maxHeight = null
 
                     } else {
                         this.classList.add('open')
-                        dropdownContent.classList.add('open')
+                        dropdownContent.classList.add('show')
                         dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px'
                     }
                 })
@@ -169,13 +172,13 @@ if (!dropdownMenu.length) {
 }
 
 
-// Функия работы dropdown-input
-const dropdownInput = document.querySelectorAll('.dropdown-input')
+// Функия работы dropdown
+const dropdown = document.querySelectorAll('.dropdown')
 
-if (!dropdownInput.length) {
+if (!dropdown.length) {
 
 } else {
-    dropdownInput.forEach(input => {
+    dropdown.forEach(input => {
         input.addEventListener('click', function (e) {
             const dropdownContent = this.querySelector('.dropdown-content')
 
@@ -189,27 +192,12 @@ if (!dropdownInput.length) {
 
             }
         })
-
-        input.querySelectorAll('.dropdown-content input[type=radio]').forEach(radio => {
-            radio.addEventListener('input', function (el) {
-                const inputValue = input.querySelector('.current-value')
-                const dropdownContent = input.querySelector('.dropdown-content')
-                inputValue.innerHTML = this.value
-                input.classList.remove('open')
-                dropdownContent.style.maxHeight = null
-
-                if (this.previousElementSibling.tagName === 'IMG') {
-                    const imgSrc = this.previousElementSibling.getAttribute('src')
-                    inputValue.previousElementSibling.querySelector('img').setAttribute('src', imgSrc)
-                }
-            })
-        })
     })
 
     window.addEventListener('click', function (e) {
-        if (!e.target.closest('.dropdown-input')) {
+        if (!e.target.closest('.dropdown')) {
 
-            document.querySelectorAll('.dropdown-input').forEach(input => {
+            document.querySelectorAll('.dropdown').forEach(input => {
                 input.classList.remove('open')
                 input.querySelector('.dropdown-content').style.maxHeight = null
             })
@@ -478,6 +466,10 @@ if (window.innerWidth > 991) {
         center: true,
     });
 }
+
+$(document).ready(function () {
+    $('select').niceSelect()
+})
 
 
 // lazyload для картинок

@@ -39,13 +39,15 @@
       max-width: 190px;
     }
 
+    > a {
+      color: $grey;
+      text-decoration: none;
+    }
+
     span {
       display: block;
       color: $grey;
-
-      &:last-of-type {
-        margin-top: auto;
-      }
+      margin-top: auto;
     }
   }
 
@@ -56,6 +58,7 @@
     .tab-btn {
       display: flex;
       overflow-y: auto;
+
       a {
         min-width: 145px;
         height: 55px;
@@ -171,7 +174,7 @@
       padding: 0;
       border-right: 0;
 
-      span {
+      span, a {
         display: none;
       }
     }
@@ -198,15 +201,20 @@
     display: flex;
     flex-direction: column;
 
-    span {
-      display: block;
+    a, span {
       color: $grey;
       font-size: 14px;
       line-height: 16px;
 
-      &:first-of-type {
-        margin-bottom: 20px;
-      }
+    }
+
+    a {
+      text-decoration: none;
+      margin-bottom: 20px;
+    }
+
+    span {
+      display: block;
     }
   }
 }

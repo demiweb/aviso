@@ -53,3 +53,15 @@
     content: url("../img/svg/slider-arrow-right.svg");
   }
 }
+
+@media screen and (max-width: 991px) {
+  .swiper-button-prev-custom, .swiper-button-next-custom {
+    outline: none;
+
+    &:hover {
+      &:after {
+        opacity: 0;
+      }
+    }
+  }
+}

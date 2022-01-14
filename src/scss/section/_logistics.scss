@@ -90,7 +90,7 @@
       border-radius: 100%;
       background: #fff;
       opacity: 0;
-      animation: .5s ease forwards;
+      animation: .2s ease forwards;
 
       .circle-shadow {
         position: absolute;
@@ -100,8 +100,8 @@
         height: 11px;
         background: transparent;
         border-radius: 100%;
-        animation: .7s ease forwards;
-        animation-delay: .5s;
+        animation: .4s ease forwards;
+        animation-delay: .2s;
       }
 
       .line {
@@ -110,8 +110,8 @@
         width: 510px;
         right: 11px;
         top: 5px;
-        animation: .7s ease forwards;
-        animation-delay: 1.2s;
+        animation: .4s ease forwards;
+        animation-delay: .6s;
         opacity: 0;
       }
     }
@@ -123,8 +123,8 @@
       top: 13px;
       left: -510px;
       opacity: 0;
-      animation: .5s ease forwards;
-      animation-delay: 1.7s;
+      animation: .4s ease forwards;
+      animation-delay: 1s;
 
       .name {
         font-size: 16px;
