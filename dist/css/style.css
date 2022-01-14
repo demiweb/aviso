@@ -3117,19 +3117,11 @@ button {
 .blog-categories ul li.active a {
   color: #2a8960;
   font-weight: 700;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .blog-categories ul li.active a:after {
   content: attr(data-arrow);
+  float: right;
 }
 
 .blog-recent {
@@ -5121,6 +5113,10 @@ button {
     -webkit-transition: max-height 0.4s ease;
     -o-transition: max-height 0.4s ease;
     transition: max-height 0.4s ease;
+  }
+
+  .blog-categories .accordion-content li a {
+    font-size: 18px !important;
   }
 
   .blog-recent {

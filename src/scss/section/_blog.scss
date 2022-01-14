@@ -52,12 +52,10 @@
       a {
         color: $green;
         font-weight: 700;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
 
         &:after {
           content: attr(data-arrow);
+          float: right;
         }
       }
     }
@@ -232,6 +230,12 @@
       max-height: 0;
       overflow: hidden;
       transition: max-height .4s ease;
+
+      li {
+        a {
+          font-size: 18px !important;
+        }
+      }
     }
   }
 
