@@ -3969,12 +3969,12 @@ button {
   }
 
   .header-content > a {
-    margin-top: 40px;
+    margin: 40px 0 55px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 251px;
-    height: 80px;
+    padding: 31px 0;
   }
 
   .header-content > a span {
