@@ -211,8 +211,11 @@
         </div>
     </section>
 
-    <section class="order anim" data-anim-delay="200" data-anim-duration="1250" data-anim="fade">
+    <section class="order">
         <div class="container">
+            <span class="section-title">
+                Transport order process
+            </span>
             <div class="order-wrapper">
                 <div class="order-time">
                     <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -261,40 +264,12 @@
                                 Завантаження
                             </span>
                                 <div>
-                                    <div class="dropdown-input">
-                                        <div class="dropdown-header">
-                                            <span class="current-value">Країна</span>
-                                            <span class="dropdown-btn">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_173_683)">
-                                                <path d="M5.47089 0.561975L5.47089 8.32098L8.36088 5.43098C8.54088 5.24998 8.83388 5.24998 9.01488 5.43098C9.19588 5.61098 9.19588 5.90398 9.01488 6.08498L5.35388 9.74598C5.35088 9.74897 5.34689 9.75098 5.34388 9.75398C5.25988 9.84298 5.14088 9.89998 5.00888 9.89998C4.97088 9.89998 4.93489 9.89398 4.89888 9.88597C4.81689 9.86697 4.73888 9.82697 4.67489 9.76298L0.985886 6.07398C0.803886 5.89198 0.803886 5.59697 0.985886 5.41498C1.16789 5.23298 1.46289 5.23298 1.64489 5.41498L4.54689 8.31698L4.54689 0.561975C4.54689 0.306975 4.75389 0.0999754 5.00889 0.0999754C5.26389 0.0999754 5.47089 0.306975 5.47089 0.561975Z"
-                                                      fill="white"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_173_683">
-                                                    <rect width="10" height="10" fill="white"
-                                                          transform="translate(10) rotate(90)"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                        </div>
-                                        <div class="dropdown-content">
-                                            <label>
-                                                Україна
-                                                <input type="radio" name="country-downloads" value="Україна">
-                                            </label>
-                                            <label>
-                                                Росія
-                                                <input type="radio" name="country-downloads" value="Росія">
-                                            </label>
-                                            <label>
-                                                Америка
-                                                <input type="radio" name="country-downloads" value="Америка">
-                                            </label>
-                                        </div>
-                                    </div>
+                                    <select>
+                                        <option data-display="Країна">Країна</option>
+                                        <option value="Україна">Україна</option>
+                                        <option value="Росія">Росія</option>
+                                        <option value="Америка">Америка</option>
+                                    </select>
                                     <label>
                                         <input type="text" placeholder="Місто">
                                     </label>
@@ -308,40 +283,12 @@
                                 Розвантаження
                             </span>
                                 <div>
-                                    <div class="dropdown-input">
-                                        <div class="dropdown-header">
-                                            <span class="current-value">Країна</span>
-                                            <span class="dropdown-btn">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_173_683)">
-                                                <path d="M5.47089 0.561975L5.47089 8.32098L8.36088 5.43098C8.54088 5.24998 8.83388 5.24998 9.01488 5.43098C9.19588 5.61098 9.19588 5.90398 9.01488 6.08498L5.35388 9.74598C5.35088 9.74897 5.34689 9.75098 5.34388 9.75398C5.25988 9.84298 5.14088 9.89998 5.00888 9.89998C4.97088 9.89998 4.93489 9.89398 4.89888 9.88597C4.81689 9.86697 4.73888 9.82697 4.67489 9.76298L0.985886 6.07398C0.803886 5.89198 0.803886 5.59697 0.985886 5.41498C1.16789 5.23298 1.46289 5.23298 1.64489 5.41498L4.54689 8.31698L4.54689 0.561975C4.54689 0.306975 4.75389 0.0999754 5.00889 0.0999754C5.26389 0.0999754 5.47089 0.306975 5.47089 0.561975Z"
-                                                      fill="white"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_173_683">
-                                                    <rect width="10" height="10" fill="white"
-                                                          transform="translate(10) rotate(90)"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                        </div>
-                                        <div class="dropdown-content">
-                                            <label>
-                                                Україна
-                                                <input type="radio" name="country-unloading" value="Україна">
-                                            </label>
-                                            <label>
-                                                Росія
-                                                <input type="radio" name="country-unloading" value="Росія">
-                                            </label>
-                                            <label>
-                                                Америка
-                                                <input type="radio" name="country-downloads" value="Америка">
-                                            </label>
-                                        </div>
-                                    </div>
+                                    <select>
+                                        <option data-display="Країна">Країна</option>
+                                        <option value="Україна">Україна</option>
+                                        <option value="Росія">Росія</option>
+                                        <option value="Америка">Америка</option>
+                                    </select>
                                     <label>
                                         <input type="text" placeholder="Місто">
                                     </label>
@@ -386,97 +333,21 @@
                                             </label>
                                         </div>
                                         <div>
-                                            <div class="dropdown-input">
-                                                <div class="dropdown-header">
-                                                    <span class="current-value">Тип авто</span>
-                                                    <span class="dropdown-btn">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_173_683)">
-                                                <path d="M5.47089 0.561975L5.47089 8.32098L8.36088 5.43098C8.54088 5.24998 8.83388 5.24998 9.01488 5.43098C9.19588 5.61098 9.19588 5.90398 9.01488 6.08498L5.35388 9.74598C5.35088 9.74897 5.34689 9.75098 5.34388 9.75398C5.25988 9.84298 5.14088 9.89998 5.00888 9.89998C4.97088 9.89998 4.93489 9.89398 4.89888 9.88597C4.81689 9.86697 4.73888 9.82697 4.67489 9.76298L0.985886 6.07398C0.803886 5.89198 0.803886 5.59697 0.985886 5.41498C1.16789 5.23298 1.46289 5.23298 1.64489 5.41498L4.54689 8.31698L4.54689 0.561975C4.54689 0.306975 4.75389 0.0999754 5.00889 0.0999754C5.26389 0.0999754 5.47089 0.306975 5.47089 0.561975Z"
-                                                      fill="white"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_173_683">
-                                                    <rect width="10" height="10" fill="white"
-                                                          transform="translate(10) rotate(90)"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                                </div>
-                                                <div class="dropdown-content">
-                                                    <label>
-                                                        Легкова
-                                                        <input type="radio" name="car-type" value="Легкова">
-                                                    </label>
-                                                    <label>
-                                                        Вантажна
-                                                        <input type="radio" name="car-type" value="Вантажна">
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-input">
-                                                <div class="dropdown-header">
-                                                    <span class="current-value">Тип завантаження</span>
-                                                    <span class="dropdown-btn">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_173_683)">
-                                                <path d="M5.47089 0.561975L5.47089 8.32098L8.36088 5.43098C8.54088 5.24998 8.83388 5.24998 9.01488 5.43098C9.19588 5.61098 9.19588 5.90398 9.01488 6.08498L5.35388 9.74598C5.35088 9.74897 5.34689 9.75098 5.34388 9.75398C5.25988 9.84298 5.14088 9.89998 5.00888 9.89998C4.97088 9.89998 4.93489 9.89398 4.89888 9.88597C4.81689 9.86697 4.73888 9.82697 4.67489 9.76298L0.985886 6.07398C0.803886 5.89198 0.803886 5.59697 0.985886 5.41498C1.16789 5.23298 1.46289 5.23298 1.64489 5.41498L4.54689 8.31698L4.54689 0.561975C4.54689 0.306975 4.75389 0.0999754 5.00889 0.0999754C5.26389 0.0999754 5.47089 0.306975 5.47089 0.561975Z"
-                                                      fill="white"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_173_683">
-                                                    <rect width="10" height="10" fill="white"
-                                                          transform="translate(10) rotate(90)"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                                </div>
-                                                <div class="dropdown-content">
-                                                    <label>
-                                                        Сипучі
-                                                        <input type="radio" name="type-downloads" value="Сипучі">
-                                                    </label>
-                                                    <label>
-                                                        Рідкі
-                                                        <input type="radio" name="type-downloads" value="Рідкі">
-                                                    </label>
-                                                    <label>
-                                                        Штучні
-                                                        <input type="radio" name="type-downloads" value="Штучні">
-                                                    </label>
-                                                </div>
-                                            </div>
-                                            <div class="dropdown-input">
-                                                <div class="dropdown-header">
-                                                    <span class="current-value">Додаткові вимоги</span>
-                                                    <span class="dropdown-btn">
-                                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_173_683)">
-                                                <path d="M5.47089 0.561975L5.47089 8.32098L8.36088 5.43098C8.54088 5.24998 8.83388 5.24998 9.01488 5.43098C9.19588 5.61098 9.19588 5.90398 9.01488 6.08498L5.35388 9.74598C5.35088 9.74897 5.34689 9.75098 5.34388 9.75398C5.25988 9.84298 5.14088 9.89998 5.00888 9.89998C4.97088 9.89998 4.93489 9.89398 4.89888 9.88597C4.81689 9.86697 4.73888 9.82697 4.67489 9.76298L0.985886 6.07398C0.803886 5.89198 0.803886 5.59697 0.985886 5.41498C1.16789 5.23298 1.46289 5.23298 1.64489 5.41498L4.54689 8.31698L4.54689 0.561975C4.54689 0.306975 4.75389 0.0999754 5.00889 0.0999754C5.26389 0.0999754 5.47089 0.306975 5.47089 0.561975Z"
-                                                      fill="white"/>
-                                            </g>
-                                            <defs>
-                                                <clipPath id="clip0_173_683">
-                                                    <rect width="10" height="10" fill="white"
-                                                          transform="translate(10) rotate(90)"/>
-                                                </clipPath>
-                                            </defs>
-                                        </svg>
-                                    </span>
-                                                </div>
-                                                <div class="dropdown-content">
-                                                    <label>
-                                                        Не передзвонювати
-                                                        <input type="radio" name="requirements"
-                                                               value="Не передзвонювати">
-                                                    </label>
-                                                </div>
-                                            </div>
+                                            <select>
+                                                <option data-display="Тип авто">Тип авто</option>
+                                                <option value="Легкова">Легкова</option>
+                                                <option value="Вантажна">Вантажна</option>
+                                            </select>
+                                            <select>
+                                                <option data-display="Тип завантаження">Тип завантаження</option>
+                                                <option value="Сипучі">Сипучі</option>
+                                                <option value="Рідкі">Рідкі</option>
+                                                <option value="Штучні">Штучні</option>
+                                            </select>
+                                            <select>
+                                                <option data-display="Додаткові вимоги">Додаткові вимоги</option>
+                                                <option value="Не передзвонювати">Не передзвонювати</option>
+                                            </select>
                                         </div>
                                         <label>
                                             <textarea placeholder="Додатковий опис"></textarea>
