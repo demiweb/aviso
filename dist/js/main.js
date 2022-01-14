@@ -53,9 +53,8 @@ new Swiper('.hero-swiper', {
         delay: 5500
     },
     speed: 300,
-
     direction: 'horizontal',
-
+    loop: false,
     preloadImages: false,
     lazy: {
         loadOnTransitionStart: false,
@@ -78,6 +77,7 @@ new Swiper('.news-swiper', {
         loadOnTransitionStart: false,
         loadPrevNext: false,
     },
+    loop: false,
 
     breakpoints: {
         1199: {
@@ -103,7 +103,7 @@ new Swiper('.seo-swiper', {
         prevEl: '.seo-swiper .swiper-button-prev',
         nextEl: '.seo-swiper .swiper-button-next',
     },
-
+    loop: false,
     preloadImages: false,
     lazy: {
         loadOnTransitionStart: false,
@@ -122,7 +122,7 @@ new Swiper('.reviews-swiper', {
         prevEl: '.reviews-swiper .swiper-button-prev',
         nextEl: '.reviews-swiper .swiper-button-next',
     },
-
+    loop: false,
     preloadImages: false,
     lazy: {
         loadOnTransitionStart: false,
