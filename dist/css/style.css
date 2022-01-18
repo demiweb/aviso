@@ -1850,6 +1850,7 @@ button {
 
 .news {
   padding: 60px 0 90px;
+  overflow: hidden;
 }
 
 .news .container > a {
@@ -4393,6 +4394,10 @@ button {
 
   .map svg path {
     opacity: 1;
+  }
+
+  .seo {
+    overflow: hidden;
   }
 
   .seo-swiper-slide .slide-text {

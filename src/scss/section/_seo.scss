@@ -114,6 +114,7 @@
       .bg {
         height: 600px;
       }
+
       svg {
         transform: translate(-50%, -90%);
       }
@@ -127,6 +128,7 @@
       .bg {
         height: 525px;
       }
+
       svg {
         transform: translate(-50%, -75%);
       }
@@ -135,7 +137,11 @@
 }
 
 @media screen and (max-width: 991px) {
+  .seo {
+    overflow: hidden;
+  }
   .seo-swiper-slide {
+
     .slide-text {
       width: 100%;
 
