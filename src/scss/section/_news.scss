@@ -33,6 +33,9 @@
   .swiper-button-prev, .swiper-button-next {
     display: none;
   }
+  .swiper-slide {
+    margin-top: 0 !important;
+  }
 }
 
 .news-swiper-slide {

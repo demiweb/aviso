@@ -6,26 +6,19 @@
     height: 200px;
   }
 }
-
 .car-park-content {
-  > div {
-    &:nth-child(even) {
-      background: #F1F6FB;
-    }
-
-    &:nth-child(odd) {
-      background: #fff;
-    }
-  }
+  overflow: hidden;
 }
+
 
 .car-self {
   padding: 39px 0 30px;
   border: 1px solid #E1E1E1;
   transition: all .4s ease;
+  background: #fff;
 
   &:hover {
-    background: linear-gradient(270deg, #FFFFFF 0%, #E4EAF0 100%);
+    background: #F1F6FB;
     box-shadow: 0 0 52px rgba(4, 71, 125, 0.12);
     position: relative;
     z-index: 50;
@@ -40,9 +33,9 @@
         flex: 1;
 
         img {
-          width: 299px;
+          width: 100%;
           height: auto;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
 
@@ -56,6 +49,9 @@
           font-weight: 700;
           margin-bottom: 9px;
           display: block;
+          &:first-letter {
+            text-transform: capitalize;
+          }
         }
 
         > span {
@@ -230,5 +226,8 @@
         }
       }
     }
+  }
+  .car-self .container .col:nth-child(3) a {
+    margin-bottom: 0;
   }
 }

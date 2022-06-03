@@ -58,7 +58,10 @@ function img () {
     return src('src/img/**/*.*')
         .pipe(dest('dist/img/'))
 }
-
+function index () {
+    return src('src/prevstyle/**/*.*')
+        .pipe(dest('dist/prevstyle/'))
+}
 function clean () {
     return del('dist/')
 }
@@ -76,6 +79,7 @@ exports.default = series(
     scss,
     js,
     img,
+    index,
     browserSyncServe,
     watchFiles,
 )

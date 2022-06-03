@@ -70,6 +70,7 @@
 }
 
 .recent-self {
+  text-decoration: none;
   width: calc(50% - 15px);
   height: 320px;
   position: relative;
@@ -145,7 +146,7 @@
     color: #fff;
   }
 
-  a {
+  p:not(.text) {
     text-decoration: none;
     display: flex;
     justify-content: flex-end;

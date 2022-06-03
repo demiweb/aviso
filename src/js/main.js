@@ -39,6 +39,14 @@ function helloConsole() {
 
 helloConsole();
 
+// lazyload для картинок
+const lazyImg = document.querySelectorAll('.lazyload');
+
+lazyImg.forEach(el => {
+    const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
+    observer.observe();
+})
+
 new Swiper('.hero-swiper', {
     effect: 'creative',
     creativeEffect: {
@@ -130,6 +138,21 @@ new Swiper('.reviews-swiper', {
     }
 });
 
+//add counting number to show delay speed
+let counterContainer = [...document.querySelectorAll('.counting-delay')];
+
+function addCoutingDelay() {
+    if (counterContainer.length) {
+        counterContainer.forEach((cont) => {
+            let anims = [...cont.querySelectorAll('.anim')];
+            anims.forEach((btn, k) => {
+                btn.dataset.animDelay = k * 100;
+            })
+        })
+    }
+}
+addCoutingDelay();
+
 // Функия работы dropdown-menu
 const dropdownMenu = document.querySelectorAll('.dropdown-menu')
 
@@ -166,6 +189,54 @@ if (!dropdownMenu.length) {
                         dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px'
                     }
                 })
+            })
+        }
+    })
+}
+//menu has own child
+const dropdownChild = document.querySelectorAll('.menu-item-has-children')
+
+
+if (!dropdownChild.length) {
+
+} else {
+    dropdownChild.forEach(dropdown => {
+        const dropdownContent = dropdown.querySelector('ul')
+
+
+        if (window.innerWidth < 991) {
+            document.querySelector('.menu-item-has-children > a').addEventListener('click', (e) => {
+                e.preventDefault();
+                // e.stopPropagation();
+
+            });
+
+            dropdownChild.forEach(dropdown => {
+
+                dropdown.addEventListener('click', function (e) {
+                    if (dropdown.classList.contains('open')) {
+                        dropdown.classList.remove('open')
+                        dropdownContent.classList.remove('show')
+                        dropdownContent.style.maxHeight = null;
+
+                    } else {
+                        this.classList.add('open')
+                        dropdownContent.classList.add('show')
+                        dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px'
+                    }
+                })
+            })
+        }
+        else {
+            dropdown.addEventListener('mouseover', function () {
+                this.classList.add('open')
+                dropdownContent.classList.add('show')
+                dropdownContent.style.maxHeight = dropdownContent.scrollHeight + 'px'
+            })
+            dropdown.addEventListener('mouseleave', function () {
+                this.classList.remove('open')
+                dropdownContent.classList.remove('show')
+                dropdownContent.style.maxHeight = null
             })
         }
     })
@@ -229,98 +300,110 @@ if (!accordion.length) {
 
 // Анимация карты
 const map = document.querySelectorAll('.map svg')
+function mapVisible() {
+    if (map.length) {
+        let delay = 0
 
-if (!map.length) {
+        const description = document.querySelector('.map .description')
 
-} else {
-    let delay = 0
-
-    const description = document.querySelector('.map .description')
-
-    map.forEach(elem => {
-        elem.querySelectorAll('path').forEach(country => {
-
+        map.forEach((elem, k) => {
             let observer = new IntersectionObserver((entries, observer) => {
                 entries.forEach(entry => {
-                    if (entry.intersectionRatio) {
-                        country.style.animation = `zoom-fade 750ms ease ${delay}ms forwards`
+                    if (entry.isIntersecting) {
+                        elem.querySelectorAll('path').forEach((country, l) => {
+                            country.style.animation = `zoom-fade 750ms ease ${delay}ms forwards`
 
-                        delay = delay + 25
+                            delay = delay + 25;
+                            observer.unobserve(entry.target);
+                            if (l === elem.querySelectorAll('path').length - 1) {
+
+                            }
+                        })
+
+
                     }
                 })
             }, {threshold: .6})
 
-            if (window.innerWidth > 991) {
-                map.forEach(animate => {
-                    observer.observe(animate)
-                })
-            } else {
+            elem.querySelectorAll('path').forEach((country, l) => {
 
-            }
 
-            country.addEventListener('mouseover', function () {
-                if (country.dataset.disable) {
-                    description.querySelector('.circle').style.animationName = 'circle'
-                    description.querySelector('.circle-shadow').style.animationName = 'circleShadow'
-                    description.querySelector('.line').style.animationName = 'line'
-                    description.querySelector('.text').style.animationName = 'fade'
+                if (window.innerWidth > 991) {
+                    map.forEach(animate => {
+                        observer.observe(animate)
+                    })
+                } else {
 
-                    let pos = this.getBBox();
-
-                    let x = pos.x + (pos.width / 2)
-                    let y = pos.y + (pos.height / 3)
-
-                    if (window.innerWidth < 991) {
-                        let x = ((pos.x + (pos.width / 2)) / 880 * 100) * (window.innerWidth / 100)
-                        let y = ((pos.y + (pos.height / 2.3)) / 852 * 100) * (elem.clientHeight / 100)
-
-                        description.style.left = x + 'px'
-                        description.style.top = y + 'px'
-                    } else if (this.id === 'country-5') {
-                        description.style.left = pos.x + 30 + 'px'
-                        description.style.top = pos.y + (pos.height / 4) + 'px'
-                    } else if (this.id === 'country-6') {
-                        description.style.left = pos.x + 50 + 'px'
-                        description.style.top = pos.y + (pos.height - 50) + 'px'
-                    } else if (this.id === 'country-8') {
-                        description.style.left = pos.x + 30 + 'px'
-                        description.style.top = pos.y + (pos.height - 50) + 'px'
-                    } else if (this.id === 'country-12') {
-                        description.style.left = pos.x + (pos.width - 50) + 'px'
-                        description.style.top = pos.y + 12 + 'px'
-                    } else if (this.id === 'country-13') {
-                        description.style.left = pos.x + (pos.width - 50) + 'px'
-                        description.style.top = pos.y + (pos.height - 50) + 'px'
-                    } else if (this.id === 'country-15') {
-                        description.style.left = pos.x + (pos.width / 3.1) + 'px'
-                        description.style.top = pos.y + (pos.height / 2.5) + 'px'
-                        description.classList.remove('description-revert')
-                    } else if (this.id === 'country-24') {
-                        description.style.left = pos.x + 10 + 'px'
-                        description.style.top = pos.y + (pos.height - 50) + 'px'
-                    } else {
-                        description.style.left = x + 'px'
-                        description.style.top = y + 'px'
-                    }
-
-                    description.querySelector('.name').innerText = this.dataset.name
-                    description.querySelector('.address').innerText = this.dataset.address
-
-                    if (pos.x < 400) {
-                        description.classList.add('description-revert')
-                    } else {
-                        description.classList.remove('description-revert')
-                    }
                 }
-            })
 
-            country.addEventListener('mouseleave', function () {
-                const descriptionAllItems = document.querySelectorAll('.map .description *')
-                descriptionAllItems.forEach(item => item.style.animationName = 'none')
+                country.addEventListener('mouseover', function () {
+                    if (country.dataset.disable) {
+                        description.querySelector('.circle').style.animationName = 'circle'
+                        description.querySelector('.circle-shadow').style.animationName = 'circleShadow'
+                        description.querySelector('.line').style.animationName = 'line'
+                        description.querySelector('.text').style.animationName = 'fade'
+
+                        let pos = this.getBBox();
+
+                        let x = pos.x + (pos.width / 2)
+                        let y = pos.y + (pos.height / 3)
+
+                        if (window.innerWidth < 991) {
+                            let x = ((pos.x + (pos.width / 2)) / 880 * 100) * (window.innerWidth / 100)
+                            let y = ((pos.y + (pos.height / 2.3)) / 852 * 100) * (elem.clientHeight / 100)
+
+                            description.style.left = x + 'px'
+                            description.style.top = y + 'px'
+                        } else if (this.id === 'country-5') {
+                            description.style.left = pos.x + 30 + 'px'
+                            description.style.top = pos.y + (pos.height / 4) + 'px'
+                        } else if (this.id === 'country-6') {
+                            description.style.left = pos.x + 50 + 'px'
+                            description.style.top = pos.y + (pos.height - 50) + 'px'
+                        } else if (this.id === 'country-8') {
+                            description.style.left = pos.x + 30 + 'px'
+                            description.style.top = pos.y + (pos.height - 50) + 'px'
+                        } else if (this.id === 'country-12') {
+                            description.style.left = pos.x + (pos.width - 50) + 'px'
+                            description.style.top = pos.y + 12 + 'px'
+                        } else if (this.id === 'country-13') {
+                            description.style.left = pos.x + (pos.width - 50) + 'px'
+                            description.style.top = pos.y + (pos.height - 50) + 'px'
+                        } else if (this.id === 'country-15') {
+                            description.style.left = pos.x + (pos.width / 3.1) + 'px'
+                            description.style.top = pos.y + (pos.height / 2.5) + 'px'
+                            description.classList.remove('description-revert')
+                        } else if (this.id === 'country-24') {
+                            description.style.left = pos.x + 10 + 'px'
+                            description.style.top = pos.y + (pos.height - 50) + 'px'
+                        } else {
+                            description.style.left = x + 'px'
+                            description.style.top = y + 'px'
+                        }
+
+                        description.querySelector('.name').innerText = this.dataset.name
+                        description.querySelector('.address').innerText = this.dataset.address
+
+                        if (pos.x < 400) {
+                            description.classList.add('description-revert')
+                        } else {
+                            description.classList.remove('description-revert')
+                        }
+                    }
+                })
+
+                country.addEventListener('mouseleave', function () {
+                    const descriptionAllItems = document.querySelectorAll('.map .description *')
+                    descriptionAllItems.forEach(item => item.style.animationName = 'none')
+                })
             })
         })
-    })
+    }
+
 }
+mapVisible();
+
+
 
 
 // Функия работы tabs
@@ -329,11 +412,11 @@ const tabs = document.querySelectorAll('.tab-btn a')
 if (!tabs.length) {
 
 } else {
-    tabs.forEach(tab => {
+    tabs.forEach((tab, k) => {
         tab.addEventListener('click', function (e) {
             e.preventDefault()
 
-            document.querySelectorAll('.tab-content > div').forEach(elem => elem.classList.remove('show'))
+            document.querySelectorAll('.tab-content > div').forEach(elem => elem.classList.remove('show'));
 
             const id = this.getAttribute('href').replace('#', '')
 
@@ -341,8 +424,9 @@ if (!tabs.length) {
                 tabs.forEach(item => item.classList.remove('active'))
                 this.classList.add('active')
             }
+            [...document.querySelectorAll('.tab-content > div')][k].classList.add('show')
 
-            document.getElementById(id).classList.add('show')
+            // document.getElementById(id).classList.add('show');
         })
     })
 }
@@ -388,7 +472,7 @@ if (!anim.length) {
                 el.style.animationDelay = el.dataset.animDelay + 'ms'
                 el.style.animationDuration = el.dataset.animDuration + 'ms'
                 el.style.animationName = el.dataset.anim
-                observer.unobserve(entry.target)
+                observer.unobserve(entry.target);
             }
 
         })
@@ -471,12 +555,4 @@ $(document).ready(function () {
     $('select').niceSelect()
 })
 
-
-// lazyload для картинок
-const lazyImg = document.querySelectorAll('.lazyload');
-
-lazyImg.forEach(el => {
-    const observer = lozad(el); // passing a `NodeList` (e.g. `document.querySelectorAll()`) is also valid
-    observer.observe();
-})
 
