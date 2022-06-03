@@ -1491,7 +1491,6 @@ button {
   width: calc(33.3333333333% - 21.3333333333px);
   background: -o-linear-gradient(150.73deg, #FFFFFF 56.71%, #D3DEED 98.98%);
   background: linear-gradient(299.27deg, #FFFFFF 56.71%, #D3DEED 98.98%);
-  border: 1px solid #F1F6FB;
   -webkit-box-shadow: 0px 4px 4px #E3EDF8;
           box-shadow: 0px 4px 4px #E3EDF8;
   border-radius: 5px;
@@ -1512,6 +1511,23 @@ button {
       -ms-flex-pack: start;
           justify-content: flex-start;
   text-decoration: none;
+  -webkit-transition: background-size 0.4s ease, -webkit-box-shadow 0.4s ease;
+  transition: background-size 0.4s ease, -webkit-box-shadow 0.4s ease;
+  -o-transition: background-size 0.4s ease, box-shadow 0.4s ease;
+  transition: background-size 0.4s ease, box-shadow 0.4s ease;
+  transition: background-size 0.4s ease, box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
+  background-size: 100%;
+}
+
+.single-upper-track:hover {
+  background-size: 400%;
+  -webkit-box-shadow: 0px 6px 8px #E3EDF8;
+          box-shadow: 0px 6px 8px #E3EDF8;
+  -webkit-transition: background-size 0.4s ease, -webkit-box-shadow 0.4s ease;
+  transition: background-size 0.4s ease, -webkit-box-shadow 0.4s ease;
+  -o-transition: background-size 0.4s ease, box-shadow 0.4s ease;
+  transition: background-size 0.4s ease, box-shadow 0.4s ease;
+  transition: background-size 0.4s ease, box-shadow 0.4s ease, -webkit-box-shadow 0.4s ease;
 }
 
 .single-upper-track .img {
